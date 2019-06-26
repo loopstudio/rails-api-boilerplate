@@ -1,24 +1,22 @@
-# README
+# Rails API Boilerplate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an opinionated boilerplate code for starting a new rails 6 API project.
 
-Things you may want to cover:
+Table of Contents
+-----------------
 
-* Ruby version
+- [Project Structure](#project-structure)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [List of Gems](#list-of-gems)
+- [Getting Started](#getting-started)
+- [Running the Test Suite](#running-the-test-suite)
+- [Contributing](#contributing)
+- [Credits](#credits)
 
-* System dependencies
 
-* Configuration
+Credits
+--------
+Rails API Boilerplate is maintained by [Loopstudio](https://loopstudio.dev).
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[<img src='https://loopstudio.dev/wp-content/uploads/2019/05/logoblack.png' width='300'/>](https://loopstudio.dev)

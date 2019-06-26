@@ -1,0 +1,56 @@
+Documentation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 15
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 25
+  Exclude:
+    - config/**/*
+    - spec/**/*
+
+Metrics/BlockNesting:
+  Max: 4
+
+Metrics/ClassLength:
+  CountComments: false
+  Max: 200
+
+Metrics/CyclomaticComplexity:
+  Max: 6
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 24
+
+Metrics/ModuleLength:
+  CountComments: false
+  Max: 200
+
+Metrics/LineLength:
+  Max: 100
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+
+Metrics/ParameterLists:
+  Max: 5
+  CountKeywordArgs: true
+
+Rails:
+  Enabled: true
+
+Rails/FilePath:
+  Enabled: false
+
+Rails/SaveBang:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ModuleFunction:
+  Enabled: false

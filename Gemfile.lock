@@ -112,6 +112,7 @@ GEM
     parallel (1.17.0)
     parser (2.6.3.0)
       ast (~> 2.4.0)
+    pg (0.18.4)
     psych (3.1.0)
     puma (3.12.1)
     rack (2.0.7)
@@ -175,7 +176,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.1)
     thor (0.20.3)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
@@ -201,6 +201,7 @@ DEPENDENCIES
   bullet (~> 6.0.1)
   byebug
   listen (>= 3.0.5, < 3.2)
+  pg (~> 0.18.4)
   puma (~> 3.11)
   rack-cors (~> 0.4.0)
   rails (~> 6.0.0.rc1)
@@ -208,7 +209,6 @@ DEPENDENCIES
   rubocop (~> 0.72.0)
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.4)
   tzinfo-data
 
 RUBY VERSION

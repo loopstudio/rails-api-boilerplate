@@ -10,6 +10,8 @@ gem 'rails', '~> 6.0.0.rc1'
 group :development, :test do
   gem 'bullet', '~> 6.0.1'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails', '~> 3.8.2'
+  gem 'factory_bot_rails', '~> 5.0.2'
 end
 
 group :development do
@@ -19,6 +21,12 @@ group :development do
   gem 'rubocop', '~> 0.72.0', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+	gem 'faker', '~> 1.9.4'
+	gem 'shoulda-matchers', '~> 4.1.0'
+	gem 'simplecov', '~> 0.13.0'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

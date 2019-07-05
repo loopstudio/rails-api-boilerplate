@@ -13,4 +13,4 @@ development:
 
 test:
   <<: *default
-  database: <%= ENV['DB_TEST_NAME'] %>
+  database: <%= "#{ENV['DB_NAME']}-test" %>

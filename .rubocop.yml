@@ -40,15 +40,6 @@ Metrics/ParameterLists:
   Max: 5
   CountKeywordArgs: true
 
-Rails:
-  Enabled: true
-
-Rails/FilePath:
-  Enabled: false
-
-Rails/SaveBang:
-  Enabled: true
-
 Style/FrozenStringLiteralComment:
   Enabled: false
 

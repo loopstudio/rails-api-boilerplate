@@ -30,3 +30,4 @@
 /config/credentials/test.key
 
 .env
+coverage

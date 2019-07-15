@@ -9,6 +9,7 @@ gem 'puma', '~> 3.11'
 gem 'pundit', '~> 2.0.1'
 gem 'rack-cors', '~> 0.4.0'
 gem 'rails', '~> 6.0.0.rc1'
+gem 'sidekiq', '~> 6.0.0.pre1'
 
 group :development, :test do
   gem 'bullet', '~> 6.0.1'

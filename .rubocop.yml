@@ -1,3 +1,7 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+
 Documentation:
   Enabled: false
 
@@ -6,7 +10,7 @@ Metrics/AbcSize:
 
 Metrics/BlockLength:
   CountComments: false
-  Max: 25
+  Max: 30
   Exclude:
     - config/**/*
     - spec/**/*
@@ -35,6 +39,8 @@ Metrics/LineLength:
   URISchemes:
     - http
     - https
+  Exclude:
+    - config/**/*
 
 Metrics/ParameterLists:
   Max: 5

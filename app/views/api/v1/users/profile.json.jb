@@ -1,0 +1,1 @@
+render('minimal', user: current_api_v1_user)

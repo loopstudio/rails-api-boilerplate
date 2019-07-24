@@ -25,7 +25,7 @@ detectors:
     enabled: true
     exclude: []
   InstanceVariableAssumption:
-    enabled: true
+    enabled: false
     exclude: []
   IrresponsibleModule:
     enabled: false
@@ -57,7 +57,7 @@ detectors:
     ignore_iterators:
     - tap
   NilCheck:
-    enabled: true
+    enabled: false
     exclude: []
   RepeatedConditional:
     enabled: true
@@ -82,7 +82,7 @@ detectors:
     enabled: true
     exclude:
     - initialize
-    max_statements: 5
+    max_statements: 7
   UncommunicativeMethodName:
     enabled: true
     exclude: []
@@ -97,7 +97,9 @@ detectors:
     reject:
     - '/^.$/'
     - '/[0-9]$/'
-    accept: []
+    accept:
+      - Inline::C
+      - "/V[0-9]/"
   UncommunicativeParameterName:
     enabled: true
     exclude: []

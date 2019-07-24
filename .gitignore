@@ -31,3 +31,4 @@
 
 .env
 coverage
+*.rdb

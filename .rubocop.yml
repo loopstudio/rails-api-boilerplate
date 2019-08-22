@@ -1,3 +1,11 @@
+require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - vendor/**/*
+    - .circleci/*
+    - db/schema.rb
+
 Documentation:
   Enabled: false
 

@@ -128,13 +128,21 @@ detectors:
     public_methods_only: false
 
 directories:
-  'app/services':
+  "app/services":
     UtilityFunction:
       enabled: false
     FeatureEnvy:
       enabled: false
-  'app/presenters':
+  "app/presenters":
     UtilityFunction:
       enabled: false
     FeatureEnvy:
+      enabled: false
+  "app/jobs":
+    UtilityFunction:
+      enabled: false
+    FeatureEnvy:
+      enabled: false
+  "app/uploaders":
+    UtilityFunction:
       enabled: false

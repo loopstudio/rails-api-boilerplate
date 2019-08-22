@@ -20,7 +20,7 @@ group :development do
   gem 'annotate', '~> 2.6.5'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'reek', '~> 5.4.0', require: false
-  gem 'rubocop', '~> 0.72.0', require: false
+  gem 'rubocop-rails', '~> 2.0.1', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end

@@ -5,7 +5,7 @@
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  
+
   config.cache_classes = false
 
   # Do not eager load code on boot. This avoids loading your whole application
@@ -49,6 +49,6 @@ Rails.application.configure do
   config.after_initialize do
     Bullet.enable = true
     Bullet.bullet_logger = true
-    Bullet.raise = true 
+    Bullet.raise = true
   end
 end

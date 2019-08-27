@@ -43,6 +43,8 @@ Metrics/LineLength:
   URISchemes:
     - http
     - https
+  Exclude:
+    - config/**/*
 
 Metrics/ParameterLists:
   Max: 5
@@ -53,3 +55,7 @@ Style/FrozenStringLiteralComment:
 
 Style/ModuleFunction:
   Enabled: false
+
+LexicallyScopedActionFilter:
+  Exclude:
+      - app/controllers/**/**

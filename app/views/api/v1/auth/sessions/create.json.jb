@@ -1,0 +1,4 @@
+{
+  user: render('api/v1/users/minimal', user: @resource),
+  must_change_password: @resource.must_change_password
+}

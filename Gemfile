@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 ruby '2.6.0'
 
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'devise_token_auth', '~> 1.0.0.rc2'
+gem 'jb', '~> 0.7.0'
 gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.11'
 gem 'rack-cors', '~> 0.4.0'
@@ -23,6 +25,7 @@ group :development do
   gem 'rubocop-rails', '~> 2.0.1', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener', '~> 1.7.0'
 end
 
 group :test do

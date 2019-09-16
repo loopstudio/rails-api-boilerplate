@@ -8,11 +8,11 @@ gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.11'
 gem 'rack-cors', '~> 0.4.0'
 gem 'rails', '~> 6.0.0.rc1'
+gem 'dotenv-rails', '~> 2.7.4'
 
 group :development, :test do
   gem 'bullet', '~> 6.0.1'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'dotenv-rails', '~> 2.7.4'
   gem 'factory_bot_rails', '~> 5.0.2'
   gem 'faker', '~> 1.9.4'
   gem 'rspec-rails', '~> 3.8.2'

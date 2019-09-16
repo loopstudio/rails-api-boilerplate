@@ -9,6 +9,7 @@ gem 'puma', '~> 3.11'
 gem 'rack-cors', '~> 0.4.0'
 gem 'rails', '~> 6.0.0.rc1'
 gem 'dotenv-rails', '~> 2.7.4'
+gem 'sidekiq', '~> 6.0.0.pre1'
 
 group :development, :test do
   gem 'bullet', '~> 6.0.1'

@@ -1,12 +1,11 @@
 describe 'DELETE api/v1/auth/sessions', type: :request do
-
   subject do
     delete destroy_api_v1_user_session_path, headers: headers, as: :json
     response
   end
 
   let(:user) { create(:user) }
-  let(:headers) { }
+  let(:headers) {}
 
   include_examples 'not signed in examples'
 

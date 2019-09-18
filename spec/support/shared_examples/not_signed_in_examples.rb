@@ -7,5 +7,5 @@ shared_examples 'not signed in examples' do
         errors: [I18n.t('devise.failure.unauthenticated')]
       )
     end
-  end 
+  end
 end

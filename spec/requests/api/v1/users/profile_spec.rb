@@ -1,12 +1,11 @@
 describe 'GET api/v1/users/profile', type: :request do
-
   subject do
     get profile_api_v1_users_path, headers: headers, as: :json
     response
   end
 
   let(:user) { create(:user) }
-  let(:headers) { }
+  let(:headers) {}
 
   include_examples 'not signed in examples'
 

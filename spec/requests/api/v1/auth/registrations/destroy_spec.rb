@@ -1,5 +1,4 @@
 describe 'DELETE api/v1/auth/registrations', type: :request do
-
   subject do
     delete api_v1_user_registration_path, headers: headers, as: :json
     response

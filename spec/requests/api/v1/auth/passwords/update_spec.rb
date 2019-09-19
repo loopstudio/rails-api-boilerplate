@@ -1,5 +1,4 @@
 describe 'PUT api/v1/auth/passwords', type: :request do
-
   subject do
     put api_v1_user_password_path, params: params, headers: headers, as: :json
     response
@@ -8,7 +7,7 @@ describe 'PUT api/v1/auth/passwords', type: :request do
   let(:user) { create(:user, must_change_password: true, password: 'password') }
   let(:password) { 'abcd1234' }
   let(:params) { { password: password } }
-  let(:headers) { }
+  let(:headers) {}
 
   include_examples 'not signed in examples'
 

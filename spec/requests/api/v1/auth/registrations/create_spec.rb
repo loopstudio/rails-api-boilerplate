@@ -1,5 +1,4 @@
 describe 'POST api/v1/auth/registrations', type: :request do
-
   subject do
     post api_v1_user_registration_path, params: params, as: :json
     response

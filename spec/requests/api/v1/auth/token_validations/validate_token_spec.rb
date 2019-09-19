@@ -1,5 +1,4 @@
 describe 'GET api/v1/auth/token_validations', type: :request do
-
   subject do
     get api_v1_auth_validate_token_path, headers: headers, as: :json
     response

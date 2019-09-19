@@ -4,7 +4,7 @@ AllCops:
   Exclude:
     - vendor/**/*
     - .circleci/*
-    - db/schema.rb
+    - 'db/**/*'
 
 Documentation:
   Enabled: false

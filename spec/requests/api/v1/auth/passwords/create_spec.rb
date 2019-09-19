@@ -1,5 +1,4 @@
 describe 'POST api/v1/auth/passwords', type: :request do
-
   subject do
     post api_v1_user_password_path, params: params, as: :json
     response

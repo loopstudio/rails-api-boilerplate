@@ -1,5 +1,4 @@
 describe 'POST api/v1/auth/sessions', type: :request do
-
   subject do
     post new_api_v1_user_session_path, params: params, as: :json
     response
@@ -39,7 +38,7 @@ describe 'POST api/v1/auth/sessions', type: :request do
     end
 
     context 'when the user is not registered' do
-      let(:user) { }
+      let(:user) {}
 
       it { is_expected.to have_http_status(:forbidden) }
 

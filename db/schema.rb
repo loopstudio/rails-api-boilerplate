@@ -20,9 +20,9 @@ ActiveRecord::Schema.define(version: 2019_07_05_213619) do
     t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "provider", default: "email", null: false
     t.string "email", null: false
     t.string "uid", null: false
-    t.string "provider", default: "email", null: false
     t.string "encrypted_password", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

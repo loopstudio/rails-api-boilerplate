@@ -14,6 +14,15 @@ Table of Contents
 - [Contributing](#contributing)
 - [Credits](#credits)
 
+## Notes
+### Gems
+#### Pagy
+For those endpoints that need pagination, you should add on the controller's method, for example:
+```ruby
+pagy, records = pagy(User.all)
+pagy_headers_merge(pagy)
+render json: records
+```
 
 Credits
 --------

@@ -284,7 +284,7 @@ DEPENDENCIES
   annotate (~> 2.6.5)
   bootsnap (>= 1.4.2)
   bullet (~> 6.0.1)
-  byebug
+  byebug (>= 11.0.1)
   devise_token_auth (~> 1.0.0.rc2)
   dotenv-rails (~> 2.7.4)
   factory_bot_rails (~> 5.0.2)
@@ -303,7 +303,7 @@ DEPENDENCIES
   shoulda-matchers (~> 4.1.0)
   sidekiq (~> 6.0.0.pre1)
   simplecov (~> 0.13.0)
-  spring
+  spring (~> 2.1.0)
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
   webmock (~> 3.6.0)

@@ -4,6 +4,7 @@ module Api
       include ExceptionHandler
       include ActAsApiRequest
       include DeviseTokenAuth::Concerns::SetUserByToken
+      include Pagy::Backend
 
       before_action :authenticate_api_v1_user!
     end

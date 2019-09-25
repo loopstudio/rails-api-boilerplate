@@ -14,7 +14,7 @@ gem 'pagy', '~> 3.5'
 
 group :development, :test do
   gem 'bullet', '~> 6.0.1'
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', '>= 11.0.1', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 5.0.2'
   gem 'faker', '~> 1.9.4'
   gem 'rspec-rails', '~> 3.8.2'
@@ -26,7 +26,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'reek', '~> 5.4.0', require: false
   gem 'rubocop-rails', '~> 2.0.1', require: false
-  gem 'spring'
+  gem 'spring', '~> 2.1.0'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 

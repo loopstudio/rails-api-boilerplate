@@ -4,13 +4,16 @@ AllCops:
   Exclude:
     - vendor/**/*
     - .circleci/*
-    - 'db/**/*'
+    - db/schema.rb
+    - bin/bundle
 
 Documentation:
   Enabled: false
 
 Metrics/AbcSize:
   Max: 15
+  Exclude:
+    - db/migrate/*
 
 Metrics/BlockLength:
   CountComments: false
@@ -59,3 +62,6 @@ Style/ModuleFunction:
 LexicallyScopedActionFilter:
   Exclude:
       - app/controllers/**/**
+
+Rails/NotNullColumn:
+  Enabled: false

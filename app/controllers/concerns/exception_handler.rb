@@ -14,7 +14,7 @@ module ExceptionHandler
   end
 
   def render_standard_error(exception)
-    raise exception if Rails.env.test?
+    raise exception if Rails.env.test? || Rails.env.development?
 
     logger.error(exception)
 

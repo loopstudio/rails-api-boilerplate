@@ -64,7 +64,7 @@ describe 'POST api/v1/auth/registrations', type: :request do
 
       it 'returns an error message' do
         expect(json(subject)).to eq(
-          errors: ["First name can't be blank"]
+          errors: [{ first_name: ["can't be blank"] }]
         )
       end
     end
@@ -76,7 +76,7 @@ describe 'POST api/v1/auth/registrations', type: :request do
 
       it 'returns an error message' do
         expect(json(subject)).to eq(
-          errors: ["Last name can't be blank"]
+          errors: [{ last_name: ["can't be blank"] }]
         )
       end
     end
@@ -88,7 +88,7 @@ describe 'POST api/v1/auth/registrations', type: :request do
 
       it 'returns an error message' do
         expect(json(subject)).to eq(
-          errors: ["Email can't be blank"]
+          errors: [{ email: ["can't be blank"] }]
         )
       end
     end
@@ -100,7 +100,7 @@ describe 'POST api/v1/auth/registrations', type: :request do
 
       it 'returns an error message' do
         expect(json(subject)).to eq(
-          errors: ["Password can't be blank"]
+          errors: [{ password: ["can't be blank"] }]
         )
       end
     end

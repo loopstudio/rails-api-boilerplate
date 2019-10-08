@@ -30,7 +30,7 @@ module ExceptionHandler
   end
 
   def render_record_invalid(exception)
-    errors = exception.record.errors.full_messages
+    errors = exception.record.errors.messages
     render_errors(errors, :unprocessable_entity)
   end
 end

@@ -10,13 +10,10 @@ describe 'POST api/v1/auth/registrations', type: :request do
   let(:password) { 'abcd1234' }
   let(:params) do
     {
-      user:
-        {
-          first_name: first_name,
-          last_name: last_name,
-          email: email,
-          password: password
-        }
+      first_name: first_name,
+      last_name: last_name,
+      email: email,
+      password: password
     }
   end
 
@@ -54,7 +51,7 @@ describe 'POST api/v1/auth/registrations', type: :request do
     context 'when any required param is given' do
       let(:params) { {} }
 
-      it { is_expected.to have_http_status(:bad_request) }
+      it { is_expected.to have_http_status(:unprocessable_entity) }
     end
 
     context 'when the first_name is missing' do

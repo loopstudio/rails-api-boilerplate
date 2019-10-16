@@ -7,6 +7,7 @@ module ActAsApiRequest
   end
 
   def check_json_request
+    return if request_body.empty?
     return if request.content_type&.match?(/json/)
 
     render json: { error: I18n.t('errors.invalid_content_type') }, status: :bad_request
@@ -14,5 +15,11 @@ module ActAsApiRequest
 
   def skip_session_storage
     request.session_options[:skip] = true
+  end
+
+  private
+
+  def request_body
+    request.body.read
   end
 end

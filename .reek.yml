@@ -45,7 +45,7 @@ detectors:
     enabled: true
     exclude: []
   MissingSafeMethod:
-    enabled: true
+    enabled: false
     exclude: []
   ModuleInitialize:
     enabled: true

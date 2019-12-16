@@ -5,13 +5,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise_token_auth', '~> 1.0.0.rc2'
 gem 'dotenv-rails', '~> 2.7.4'
 gem 'jb', '~> 0.7.0'
+gem 'pagy', '~> 3.5'
 gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.11'
 gem 'rack-cors', '~> 0.4.0'
 gem 'rails', '~> 6.0.0.rc1'
-gem 'sidekiq', '~> 6.0.0.pre1'
 gem 'sentry-raven', '~> 2.12.3'
-gem 'pagy', '~> 3.5'
+gem 'sidekiq', '~> 6.0.0.pre1'
 
 group :development, :test do
   gem 'bullet', '~> 6.0.1'

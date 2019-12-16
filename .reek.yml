@@ -55,7 +55,7 @@ detectors:
     exclude: []
     max_allowed_nesting: 1
     ignore_iterators:
-    - tap
+      - tap
   NilCheck:
     enabled: false
     exclude: []
@@ -81,42 +81,42 @@ detectors:
   TooManyStatements:
     enabled: true
     exclude:
-    - initialize
+      - initialize
     max_statements: 9
   UncommunicativeMethodName:
     enabled: true
     exclude: []
     reject:
-    - '/^[a-z]$/'
-    - '/[0-9]$/'
-    - '/[A-Z]/'
+      - "/^[a-z]$/"
+      - "/[0-9]$/"
+      - "/[A-Z]/"
     accept: []
   UncommunicativeModuleName:
     enabled: true
     exclude: []
     reject:
-    - '/^.$/'
-    - '/[0-9]$/'
+      - "/^.$/"
+      - "/[0-9]$/"
     accept:
       - "/V[0-9]/"
   UncommunicativeParameterName:
     enabled: true
     exclude: []
     reject:
-    - '/^.$/'
-    - '/[0-9]$/'
-    - '/[A-Z]/'
-    - '/^_/'
+      - "/^.$/"
+      - "/[0-9]$/"
+      - "/[A-Z]/"
+      - "/^_/"
     accept: []
   UncommunicativeVariableName:
     enabled: true
-    exclude: []
+    exclude: [e]
     reject:
-    - '/^.$/'
-    - '/[0-9]$/'
-    - '/[A-Z]/'
+      - "/^.$/"
+      - "/[0-9]$/"
+      - "/[A-Z]/"
     accept:
-    - '/^_$/'
+      - "/^_$/"
   UnusedParameters:
     enabled: true
     exclude: []

@@ -35,7 +35,9 @@ module ExceptionHandler
   end
 
   def set_raven_context
-    Raven.user_context(id: current_api_user.id) unless current_api_user.nil?
+    unless current_api_v1_user.nil?
+      Raven.user_context(id: current_api_v1_user.id, email: current_api_v1_user.email)
+    end
     Raven.extra_context(params: params.to_unsafe_h, url: request.url)
   end
 end

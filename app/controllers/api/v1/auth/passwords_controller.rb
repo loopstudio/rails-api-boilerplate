@@ -16,8 +16,7 @@ module Api
           user = User.find_by(email: email)
 
           if user
-            reset_password_service = ::Auth::ResetPasswordService.new(user)
-            reset_password_service.reset_password
+            ::Auth::ResetPasswordService.call(user: user)
 
             head :no_content
           else

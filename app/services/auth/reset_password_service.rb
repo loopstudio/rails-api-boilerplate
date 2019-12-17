@@ -1,10 +1,18 @@
 module Auth
-  class ResetPasswordService
-    attr_reader :user
-
-    def initialize(user)
+  class ResetPasswordService < ApplicationService
+    def initialize(user:)
       @user = user
     end
+
+    def call
+      reset_password
+    rescue StandardError => e
+      errors << e.message
+    end
+
+    private
+
+    attr_reader :user
 
     def reset_password
       new_password = Devise.friendly_token.first(8)

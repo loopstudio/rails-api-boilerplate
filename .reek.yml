@@ -147,3 +147,11 @@ directories:
   "app/uploaders":
     UtilityFunction:
       enabled: false
+  "app/validators":
+    ControlParameter:
+      enabled: false
+  "db/migrate":
+    FeatureEnvy:
+      enabled: false
+    TooManyStatements:
+      enabled: false

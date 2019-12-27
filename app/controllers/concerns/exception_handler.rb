@@ -33,4 +33,11 @@ module ExceptionHandler
     errors = exception.record.errors.messages
     render_errors(errors, :unprocessable_entity)
   end
+
+  def set_raven_context
+    Raven.extra_context(params: params.to_unsafe_h, url: request.url)
+    return if current_api_v1_user.nil?
+
+    Raven.user_context(id: current_api_v1_user.id, email: current_api_v1_user.email)
+  end
 end

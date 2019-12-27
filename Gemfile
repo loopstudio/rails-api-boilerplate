@@ -10,6 +10,7 @@ gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.11'
 gem 'rack-cors', '~> 0.4.0'
 gem 'rails', '~> 6.0.0.rc1'
+gem 'sentry-raven', '~> 2.12.3'
 gem 'sidekiq', '~> 6.0.0.pre1'
 
 group :development, :test do

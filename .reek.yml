@@ -147,3 +147,6 @@ directories:
   "app/uploaders":
     UtilityFunction:
       enabled: false
+  "spec/support":
+    UtilityFunction:
+      enabled: false

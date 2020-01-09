@@ -1,7 +1,6 @@
 describe 'GET api/v1/users/profile', type: :request do
-  subject do
+  subject(:get_request) do
     get profile_api_v1_users_path, headers: headers, as: :json
-    response
   end
 
   let(:user) { create(:user) }
@@ -12,10 +11,16 @@ describe 'GET api/v1/users/profile', type: :request do
   context 'when the user is signed in' do
     let(:headers) { auth_headers(user) }
 
-    it { is_expected.to have_http_status(:success) }
+    specify do
+      get_request
+
+      expect(response).to have_http_status(:success)
+    end
 
     it "returns the logged in user's data" do
-      expect(json(subject)).to eq(
+      get_request
+
+      expect(json).to include_json(
         id: user.id,
         first_name: user.first_name,
         last_name: user.last_name,

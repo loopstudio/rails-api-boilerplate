@@ -1,7 +1,6 @@
 describe 'DELETE api/v1/auth/registrations', type: :request do
-  subject do
+  subject(:delete_request) do
     delete api_v1_user_registration_path, headers: headers, as: :json
-    response
   end
 
   let(:user) { create(:user) }
@@ -11,7 +10,11 @@ describe 'DELETE api/v1/auth/registrations', type: :request do
   context 'when the user is signed in' do
     let(:headers) { auth_headers(user) }
 
-    it { is_expected.to have_http_status(:no_content) }
+    specify do
+      delete_request
+
+      expect(response).to have_http_status(:no_content)
+    end
 
     it 'deletes the user record' do
       delete api_v1_user_registration_path, headers: headers, as: :json

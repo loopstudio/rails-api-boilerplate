@@ -147,3 +147,15 @@ directories:
   "app/uploaders":
     UtilityFunction:
       enabled: false
+  "db/migrate":
+    UtilityFunction:
+      enabled: false
+    FeatureEnvy:
+      enabled: false
+    TooManyStatements:
+      enabled: false
+  "rubocop":
+    UtilityFunction:
+      enabled: false
+    FeatureEnvy:
+      enabled: false

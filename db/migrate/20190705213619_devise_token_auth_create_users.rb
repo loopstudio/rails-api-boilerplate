@@ -1,4 +1,6 @@
 class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]
+  disable_ddl_transaction!
+
   def change
     change_table :users, bulk: true do |t|
       t.string :provider, null: false, default: 'email'
@@ -21,9 +23,9 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]
       t.boolean :must_change_password, default: false
     end
 
-    add_index :users, :email, unique: true
-    add_index :users, %i[uid provider], unique: true
-    add_index :users, :reset_password_token, unique: true
-    add_index :users, :confirmation_token, unique: true
+    add_index :users, :email, unique: true, algorithm: :concurrently
+    add_index :users, %i[uid provider], unique: true, algorithm: :concurrently
+    add_index :users, :reset_password_token, unique: true, algorithm: :concurrently
+    add_index :users, :confirmation_token, unique: true, algorithm: :concurrently
   end
 end

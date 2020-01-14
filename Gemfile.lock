@@ -56,8 +56,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.1, >= 2.1.8)
-    addressable (2.6.0)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     annotate (2.6.7)
       activerecord (>= 2.3.0)
       rake (~> 10.4.2, >= 10.4.2)
@@ -156,7 +156,7 @@ GEM
       ast (~> 2.4.0)
     pg (0.18.4)
     psych (3.1.0)
-    public_suffix (3.1.1)
+    public_suffix (4.0.3)
     puma (3.12.1)
     rack (2.0.7)
     rack-cors (0.4.1)
@@ -273,7 +273,7 @@ GEM
       equalizer (~> 0.0, >= 0.0.9)
     warden (1.2.8)
       rack (>= 2.0.6)
-    webmock (3.6.2)
+    webmock (3.7.6)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -312,7 +312,7 @@ DEPENDENCIES
   spring (~> 2.1.0)
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
-  webmock (~> 3.6.0)
+  webmock (~> 3.7.6)
 
 RUBY VERSION
    ruby 2.6.0p0

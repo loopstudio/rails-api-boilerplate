@@ -33,7 +33,7 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers', '~> 4.1.0'
+  gem 'shoulda-matchers', '~> 4.2.0'
   gem 'simplecov', '~> 0.17.1'
   gem 'webmock', '~> 3.7.6'
 end

@@ -1,7 +1,6 @@
 describe 'POST api/v1/auth/registrations', type: :request do
-  subject do
+  subject(:post_request) do
     post api_v1_user_registration_path, params: params, as: :json
-    response
   end
 
   let(:first_name) { 'Obi Wan' }
@@ -20,21 +19,23 @@ describe 'POST api/v1/auth/registrations', type: :request do
   context 'with correct params given' do
     let(:created_user) { User.last }
 
-    it { is_expected.to have_http_status(:ok) }
+    specify do
+      post_request
+
+      expect(response).to have_http_status(:ok)
+    end
 
     it 'returns the user info' do
-      post api_v1_user_registration_path, params: params, as: :json
+      post_request
 
-      expected_response = {
+      expect(json).to include_json(
         id: created_user.id,
         first_name: first_name,
         last_name: last_name,
         email: email,
         created_at: created_user.created_at.as_json,
         updated_at: created_user.updated_at.as_json
-      }
-
-      expect(json(response)).to eq(expected_response)
+      )
     end
 
     it 'sets the authentication headers' do
@@ -51,54 +52,74 @@ describe 'POST api/v1/auth/registrations', type: :request do
     context 'when any required param is given' do
       let(:params) { {} }
 
-      it { is_expected.to have_http_status(:unprocessable_entity) }
+      specify do
+        post_request
+
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
     end
 
     context 'when the first_name is missing' do
       let(:first_name) { nil }
 
-      it { is_expected.to have_http_status(:unprocessable_entity) }
+      specify do
+        post_request
+
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
 
       it 'returns an error message' do
-        expect(json(subject)).to eq(
-          errors: [{ first_name: ["can't be blank"] }]
-        )
+        post_request
+
+        expect(json[:errors][0][:first_name]).not_to be_nil
       end
     end
 
     context 'when the last name is missing' do
       let(:last_name) { nil }
 
-      it { is_expected.to have_http_status(:unprocessable_entity) }
+      specify do
+        post_request
+
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
 
       it 'returns an error message' do
-        expect(json(subject)).to eq(
-          errors: [{ last_name: ["can't be blank"] }]
-        )
+        post_request
+
+        expect(json[:errors][0][:last_name]).not_to be_nil
       end
     end
 
     context 'when the email is missing' do
       let(:email) { nil }
 
-      it { is_expected.to have_http_status(:unprocessable_entity) }
+      specify do
+        post_request
+
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
 
       it 'returns an error message' do
-        expect(json(subject)).to eq(
-          errors: [{ email: ["can't be blank"] }]
-        )
+        post_request
+
+        expect(json[:errors][0][:email]).not_to be_nil
       end
     end
 
     context 'when the password is missing' do
       let(:password) { nil }
 
-      it { is_expected.to have_http_status(:unprocessable_entity) }
+      specify do
+        post_request
+
+        expect(response).to have_http_status(:unprocessable_entity)
+      end
 
       it 'returns an error message' do
-        expect(json(subject)).to eq(
-          errors: [{ password: ["can't be blank"] }]
-        )
+        post_request
+
+        expect(json[:errors][0][:password]).not_to be_nil
       end
     end
   end

@@ -1,17 +1,22 @@
 describe 'GET api/v1/auth/token_validations', type: :request do
-  subject do
+  subject(:get_request) do
     get api_v1_auth_validate_token_path, headers: headers, as: :json
-    response
   end
 
   let(:user) { create(:user) }
   let(:headers) { auth_headers(user) }
 
   context 'with a live auth token' do
-    it { is_expected.to have_http_status(:ok) }
+    specify do
+      get_request
+
+      expect(response).to have_http_status(:ok)
+    end
 
     it "returns the logged in user's data" do
-      expect(json(subject)).to eq(
+      get_request
+
+      expect(json).to include_json(
         id: user.id,
         first_name: user.first_name,
         last_name: user.last_name,
@@ -34,12 +39,16 @@ describe 'GET api/v1/auth/token_validations', type: :request do
   context 'with an incorrect auth token' do
     let(:user) { build(:user) }
 
-    it { is_expected.to have_http_status(:forbidden) }
+    specify do
+      get_request
+
+      expect(response).to have_http_status(:forbidden)
+    end
 
     it 'returns invalid token error' do
-      expect(json(subject)).to eq(
-        errors: [I18n.t('errors.authentication.invalid_token')]
-      )
+      get_request
+
+      expect(json[:errors]).to include(I18n.t('errors.authentication.invalid_token'))
     end
   end
 end

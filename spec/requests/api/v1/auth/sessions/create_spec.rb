@@ -1,7 +1,6 @@
 describe 'POST api/v1/auth/sessions', type: :request do
-  subject do
+  subject(:post_request) do
     post new_api_v1_user_session_path, params: params, as: :json
-    response
   end
 
   let(:email) { 'obikenobi@rebel.com' }
@@ -11,10 +10,16 @@ describe 'POST api/v1/auth/sessions', type: :request do
 
   context 'with correct params' do
     context 'when the user is registered' do
-      it { is_expected.to have_http_status(:ok) }
+      specify do
+        post_request
+
+        expect(response).to have_http_status(:ok)
+      end
 
       it 'returns the user & session information' do
-        expect(json(subject)).to eq(
+        post_request
+
+        expect(json).to include_json(
           user: {
             id: user.id,
             first_name: user.first_name,
@@ -40,12 +45,16 @@ describe 'POST api/v1/auth/sessions', type: :request do
     context 'when the user is not registered' do
       let(:user) {}
 
-      it { is_expected.to have_http_status(:forbidden) }
+      specify do
+        post_request
+
+        expect(response).to have_http_status(:forbidden)
+      end
 
       it 'returns the user & session information' do
-        expect(json(subject)).to eq(
-          errors: [I18n.t('errors.authentication.invalid_credentials')]
-        )
+        post_request
+
+        expect(json[:errors][0]).not_to be_nil
       end
     end
   end
@@ -54,18 +63,26 @@ describe 'POST api/v1/auth/sessions', type: :request do
     context 'when any required param is given' do
       let(:params) { {} }
 
-      it { is_expected.to have_http_status(:forbidden) }
+      specify do
+        post_request
+
+        expect(response).to have_http_status(:forbidden)
+      end
     end
 
     context 'when the password is missing' do
       let(:params) { { email: email, password: nil } }
 
-      it { is_expected.to have_http_status(:forbidden) }
+      specify do
+        post_request
+
+        expect(response).to have_http_status(:forbidden)
+      end
 
       it 'returns an error message' do
-        expect(json(subject)).to eq(
-          errors: [I18n.t('errors.authentication.invalid_credentials')]
-        )
+        post_request
+
+        expect(json[:errors][0]).not_to be_nil
       end
     end
   end

@@ -1,5 +1,5 @@
 module RequestHelpers
-  def json(response)
+  def json
     raise 'Response is nil. Are you sure you made a request?' unless response
 
     JSON.parse(response.body, symbolize_names: true)

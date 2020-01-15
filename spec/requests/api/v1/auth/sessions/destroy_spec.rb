@@ -1,7 +1,6 @@
 describe 'DELETE api/v1/auth/sessions', type: :request do
-  subject do
+  subject(:delete_request) do
     delete destroy_api_v1_user_session_path, headers: headers, as: :json
-    response
   end
 
   let(:user) { create(:user) }
@@ -13,10 +12,16 @@ describe 'DELETE api/v1/auth/sessions', type: :request do
     let(:headers) { auth_headers(user) }
 
     context 'when the user exists' do
-      it { is_expected.to have_http_status(:no_content) }
+      specify do
+        delete_request
+
+        expect(response).to have_http_status(:no_content)
+      end
 
       it 'returns no authentication headers' do
-        expect(subject.header['access-token']).to eq nil
+        delete_request
+
+        expect(response.header['access-token']).to eq nil
         expect(response.header['client']).to eq nil
       end
 
@@ -28,10 +33,16 @@ describe 'DELETE api/v1/auth/sessions', type: :request do
     context 'when the user does not exist' do
       let(:user) { build(:user) }
 
-      it { is_expected.to have_http_status(:unauthorized) }
+      specify do
+        delete_request
+
+        expect(response).to have_http_status(:unauthorized)
+      end
 
       it 'returns no authentication headers' do
-        expect(subject.header['access-token']).to eq nil
+        delete_request
+
+        expect(response.header['access-token']).to eq nil
         expect(response.header['client']).to eq nil
       end
     end

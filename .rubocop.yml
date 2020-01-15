@@ -1,4 +1,6 @@
-require: rubocop-rails
+require:
+  - rubocop-rails
+  - ./rubocop/rubocop
 
 AllCops:
   Exclude:
@@ -6,6 +8,7 @@ AllCops:
     - .circleci/*
     - db/schema.rb
     - bin/bundle
+    - rubocop/**/*.rb
 
 Documentation:
   Enabled: false

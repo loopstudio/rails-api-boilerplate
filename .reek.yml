@@ -150,3 +150,18 @@ directories:
   "spec/support":
     UtilityFunction:
       enabled: false
+  "app/validators":
+    ControlParameter:
+      enabled: false
+  "db/migrate":
+    UtilityFunction:
+      enabled: false
+    FeatureEnvy:
+      enabled: false
+    TooManyStatements:
+      enabled: false
+  "rubocop":
+    UtilityFunction:
+      enabled: false
+    FeatureEnvy:
+      enabled: false

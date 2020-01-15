@@ -26,7 +26,7 @@ group :development do
   gem 'letter_opener', '~> 1.7.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'reek', '~> 5.4.0', require: false
-  gem 'rubocop-rails', '~> 2.0.1', require: false
+  gem 'rubocop-rails', '~> 2.4.1', require: false
   gem 'spring', '~> 2.1.0'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end

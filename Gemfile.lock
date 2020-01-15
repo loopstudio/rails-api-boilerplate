@@ -160,7 +160,8 @@ GEM
     public_suffix (4.0.3)
     puma (3.12.2)
     rack (2.1.1)
-    rack-cors (0.4.1)
+    rack-cors (1.0.5)
+      rack (>= 1.6.0)
     rack-protection (2.0.8.1)
       rack
     rack-test (1.1.0)
@@ -303,7 +304,7 @@ DEPENDENCIES
   pagy (~> 3.5)
   pg (~> 0.18.4)
   puma (~> 3.12)
-  rack-cors (~> 0.4.0)
+  rack-cors (~> 1.0.5)
   rails (~> 6.0.0.rc1)
   reek (~> 5.4.0)
   rspec-json_expectations (~> 2.2.0)

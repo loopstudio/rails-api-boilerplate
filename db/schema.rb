@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_07_05_213619) do
     t.string "last_sign_in_ip"
     t.string "unconfirmed_email"
     t.integer "sign_in_count", default: 0
-    t.json "tokens"
+    t.json "tokens", default: {}, null: false
     t.boolean "must_change_password", default: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true

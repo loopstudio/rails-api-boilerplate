@@ -17,7 +17,7 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[6.0]
       t.string :last_sign_in_ip
       t.string :unconfirmed_email
       t.integer :sign_in_count, default: 0
-      t.json :tokens
+      t.json :tokens, null: false, default: {}
       t.boolean :must_change_password, default: false
     end
 

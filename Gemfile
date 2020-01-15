@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 ruby '2.6.0'
 
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'devise_token_auth', '~> 1.0.0.rc2'
+gem 'devise', '~> 4.2'
+gem 'devise_token_auth', '~> 1.1', '>= 1.1.3'
 gem 'dotenv-rails', '~> 2.7.4'
 gem 'jb', '~> 0.7.0'
 gem 'pagy', '~> 3.5'

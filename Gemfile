@@ -11,7 +11,7 @@ gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.12'
 gem 'rack-cors', '~> 1.0.5'
 gem 'rails', '~> 6.0.0.rc1'
-gem 'sentry-raven', '~> 2.12.3'
+gem 'sentry-raven', '~> 2.13.0'
 gem 'sidekiq', '~> 6.0.4'
 
 group :development, :test do

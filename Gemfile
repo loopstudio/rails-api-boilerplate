@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.6.0'
 
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'rails', '~> 6.0.0.rc1'
+gem 'rails', '~> 6.0.2.1'
 
 # WebServer
 gem 'puma', '~> 4.3'

@@ -25,7 +25,7 @@ gem 'devise_token_auth', '~> 1.1.2'
 gem 'jb', '~> 0.7.0'
 
 # Pagination
-gem 'pagy', '~> 3.5'
+gem 'pagy', '~> 3.7'
 
 # Monitoring errors
 gem 'sentry-raven', '~> 2.13.0'

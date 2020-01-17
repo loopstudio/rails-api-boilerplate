@@ -6,7 +6,7 @@ module Api
       include DeviseTokenAuth::Concerns::SetUserByToken
       include Pagy::Backend
 
-      before_action :authenticate_api_v1_user!
+      before_action :authenticate_user!
       before_action :set_raven_context
     end
   end

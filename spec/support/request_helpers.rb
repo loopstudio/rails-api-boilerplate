@@ -5,7 +5,7 @@ module RequestHelpers
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def auth_headers(user)
-    user.create_new_auth_token
+  def auth_headers
+    @auth_headers ||= user.create_new_auth_token
   end
 end

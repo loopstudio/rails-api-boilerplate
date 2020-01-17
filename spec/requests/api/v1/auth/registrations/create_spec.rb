@@ -59,38 +59,6 @@ describe 'POST api/v1/auth/registrations', type: :request do
       end
     end
 
-    context 'when the first_name is missing' do
-      let(:first_name) { nil }
-
-      specify do
-        post_request
-
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
-
-      it 'returns an error message' do
-        post_request
-
-        expect(json[:errors][0][:first_name]).not_to be_nil
-      end
-    end
-
-    context 'when the last name is missing' do
-      let(:last_name) { nil }
-
-      specify do
-        post_request
-
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
-
-      it 'returns an error message' do
-        post_request
-
-        expect(json[:errors][0][:last_name]).not_to be_nil
-      end
-    end
-
     context 'when the email is missing' do
       let(:email) { nil }
 

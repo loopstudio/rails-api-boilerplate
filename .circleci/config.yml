@@ -31,8 +31,7 @@ jobs:
           command: RAILS_ENV=test bundle exec rspec
       - run:
           name: run code analysis
-          command: |
-            bundle exec rake analyze_code
+          command: bundle exec rake analyze_code
 
       - store_test_results:
           path: /tmp/test-results

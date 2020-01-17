@@ -64,7 +64,11 @@ Style/ModuleFunction:
 
 LexicallyScopedActionFilter:
   Exclude:
-      - app/controllers/**/**
+    - app/controllers/**/**
+
+Rails/RakeEnvironment:
+  Exclude:
+    - lib/tasks/linters.rake
 
 Rails/NotNullColumn:
   Enabled: false

@@ -1,6 +1,6 @@
 require 'optparse'
 
-task :analyze_code do
+task :linters do
   options = {}
   OptionParser.new do |opts|
     opts.on('-a') { |autofix| options[:autofix] = autofix }

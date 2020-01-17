@@ -49,17 +49,26 @@ render json: records
 
 ## Getting Started
 
-1.  Make sure that you have Rails 6 and PostgreSQL installed.
+1.  Make sure that you have Rails 6, PostgreSQL, git cli and bundle installed.
 2.  Clone this repo using `git clone --depth=1 https://github.com/LoopStudio/rails-api-boilerplate.git <YOUR_PROJECT_NAME>`
-3. Create your `.env` file. You have an example at `.env.template`. You should be able to copy it and set your own values.
+3.  Create your `.env` file. You have an example at `.env.template`. You should be able to copy it and set your own values.
     _It's a good practice to keep the `.env.template` updated every time you need a new environment variable._
 4.  Run `bundle install`
-5.  Run `rake db:create`
-6.  Run `rake db:migrate`
-7. Check the test are passing running `rspec`
+5.  Run `bundle exec rake db:create`
+6.  Run `bundle exec rake db:migrate`
+7.  Run `bundle exec rake db:seed`
+8.  Check the test are passing running `rspec`
     _At this point you can run `rails s`  and start making your REST API calls at `http://localhost:3000`_
+9.  Edit or delete the `CODEOWNERS` file in `.github` directory
+10. Edit this README file to match your own project title and description
+ _It's a good practice to keep this file updated as you make important changes to the installation instructions or project characteristics._
 
-## Code quality
+## Tests
+
+You can run the unit tests with `rspec` or `rspec` followed by a specific test file or directory.
+
+
+## Code Quality
 
 With `rake linters` you can run the code analysis tool, you can omit rules with:
 
@@ -67,6 +76,10 @@ With `rake linters` you can run the code analysis tool, you can omit rules with:
 - [Reek](https://github.com/troessner/reek#configuration-file) Edit `config.reek`
 
 Pass the `-a` option to auto-fix (only for some linterns).
+
+## Job Monitor
+
+Once the app is up and running, the route `/jobmonitor` will take you to the Sidekiq dashboard so you can see the status of the jobs.
 
 ## Contributing
 

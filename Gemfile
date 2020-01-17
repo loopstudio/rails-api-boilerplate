@@ -17,6 +17,12 @@ gem 'dotenv-rails', '~> 2.7.4'
 # Async worker
 gem 'sidekiq', '~> 6.0.4'
 
+# Backoffice
+gem 'active_admin_theme', '~> 1.0', '>= 1.0.2'
+gem 'activeadmin', '~> 2.6.0'
+gem 'activeadmin_addons', '~> 1.7.1'
+gem 'ransack', '~> 2.3.2'
+
 # Authentication
 gem 'devise', '~> 4.7.1'
 gem 'devise_token_auth', '~> 1.1.2'

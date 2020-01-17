@@ -61,4 +61,5 @@ Rails.application.configure do
   end
 
   config.action_mailer.preview_path = Rails.root.join('spec/mailers/previews')
+  config.cache_store = :memory_store
 end

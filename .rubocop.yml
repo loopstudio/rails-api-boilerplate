@@ -25,6 +25,7 @@ Metrics/BlockLength:
     - config/**/*
     - spec/**/*
     - lib/tasks/auto_annotate_models.rake
+    - app/admin/**/*
 
 Metrics/BlockNesting:
   Max: 4

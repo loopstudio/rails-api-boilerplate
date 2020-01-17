@@ -2,17 +2,33 @@ source 'https://rubygems.org'
 ruby '2.6.0'
 
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'devise', '~> 4.7'
-gem 'devise_token_auth', '~> 1.1', '>= 1.1.3'
-gem 'dotenv-rails', '~> 2.7.4'
-gem 'jb', '~> 0.7.0'
-gem 'pagy', '~> 3.5'
-gem 'pg', '~> 0.18.4'
+gem 'rails', '~> 6.0.0.rc1'
+
+# WebServer
 gem 'puma', '~> 4.3'
 gem 'rack-cors', '~> 1.1.1'
-gem 'rails', '~> 6.0.0.rc1'
-gem 'sentry-raven', '~> 2.13.0'
+
+# Database
+gem 'pg', '~> 0.18.4'
+
+# Environment variables
+gem 'dotenv-rails', '~> 2.7.4'
+
+# Async worker
 gem 'sidekiq', '~> 6.0.4'
+
+# Authentication
+gem 'devise', '~> 4.7.1'
+gem 'devise_token_auth', '~> 1.1.2'
+
+# Serializing json views
+gem 'jb', '~> 0.7.0'
+
+# Pagination
+gem 'pagy', '~> 3.5'
+
+# Monitoring errors
+gem 'sentry-raven', '~> 2.13.0'
 
 group :development, :test do
   gem 'bullet', '~> 6.1.0'

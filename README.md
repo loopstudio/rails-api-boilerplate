@@ -61,7 +61,7 @@ render json: records
 
 ## Code quality
 
-With `rake analyze_code` you can run the code analysis tool, you can omit rules with:
+With `rake linters` you can run the code analysis tool, you can omit rules with:
 
 - [Rubocop](https://github.com/bbatsov/rubocop/blob/master/config/default.yml) Edit `.rubocop.yml`
 - [Reek](https://github.com/troessner/reek#configuration-file) Edit `config.reek`

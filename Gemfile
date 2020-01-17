@@ -23,7 +23,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'annotate', '~> 2.6.5'
+  gem 'annotate', '~> 3.0.3'
   gem 'letter_opener', '~> 1.7.0'
   gem 'listen', '>= 3.0.5', '< 3.3'
   gem 'reek', '~> 5.4.0', require: false

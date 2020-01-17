@@ -1,0 +1,3 @@
+{
+  user: render('minimal', user: user)
+}

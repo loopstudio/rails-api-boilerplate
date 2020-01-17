@@ -160,6 +160,9 @@ directories:
       enabled: false
     TooManyStatements:
       enabled: false
+  "spec/mailers/previews":
+    UtilityFunction:
+      enabled: false
   "rubocop":
     UtilityFunction:
       enabled: false

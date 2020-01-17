@@ -1,0 +1,3 @@
+{
+  user: render('api/v1/users/minimal', user: @resource)
+}

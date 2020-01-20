@@ -23,7 +23,8 @@ detectors:
     allow_calls: []
   FeatureEnvy:
     enabled: true
-    exclude: []
+    exclude:
+      - WithStatsScopes#this_month
   InstanceVariableAssumption:
     enabled: false
     exclude: []
@@ -166,5 +167,8 @@ directories:
   "rubocop":
     UtilityFunction:
       enabled: false
+    FeatureEnvy:
+      enabled: false
+  "app/admin":
     FeatureEnvy:
       enabled: false

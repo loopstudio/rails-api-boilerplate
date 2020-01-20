@@ -7,7 +7,7 @@ describe UserMailer, type: :mailer do
     subject(:mailer_action) { UserMailer.reset_password_email(user, new_password) }
 
     it 'renders the headers' do
-      expect(mailer_action.subject).to eq('Recover account')
+      expect(mailer_action.subject).to eq(I18n.t('emails.reset_password.recover_account'))
       expect(mailer_action.to).to include(user.email)
       expect(mailer_action.from).to include('from@example.com')
     end

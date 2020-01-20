@@ -3,9 +3,16 @@ en:
     general: General
     overview: Overview
     session_info: Sign in info
+    this_month: This month
+    total: Total
     dashboard_welcome:
       welcome: Welcome to your Admin Backoffice
       call_to_action: Here are some stats!
+  activerecord:
+    models:
+      user:
+        one: User
+        other: Users
   errors:
     server: 'An error ocurred'
     record_not_found: 'No such record'

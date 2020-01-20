@@ -24,6 +24,7 @@ Metrics/BlockLength:
   Exclude:
     - config/**/*
     - spec/**/*
+    - lib/tasks/auto_annotate_models.rake
 
 Metrics/BlockNesting:
   Max: 4
@@ -72,6 +73,7 @@ LexicallyScopedActionFilter:
 Rails/RakeEnvironment:
   Exclude:
     - lib/tasks/linters.rake
+    - lib/tasks/auto_annotate_models.rake
 
 Rails/NotNullColumn:
   Enabled: false

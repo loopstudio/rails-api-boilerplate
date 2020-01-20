@@ -14,6 +14,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            gem update bundler
             bundle install --jobs=4 --retry=3 --path vendor/bundle
       - save_cache:
           paths:

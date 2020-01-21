@@ -4,6 +4,7 @@ module ActAsApiRequest
   included do
     before_action :skip_session_storage
     before_action :check_json_request
+    skip_before_action :verify_authenticity_token
   end
 
   def check_json_request

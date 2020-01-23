@@ -63,7 +63,7 @@ describe 'POST /api/v1/users', type: :request do
       it 'returns an error message' do
         post_request
 
-        expect(json[:errors][0][:email]).not_to be_nil
+        expect(json[:attributes_errors][:email]).not_to be_nil
       end
     end
 
@@ -79,7 +79,7 @@ describe 'POST /api/v1/users', type: :request do
       it 'returns an error message' do
         post_request
 
-        expect(json[:errors][0][:password]).not_to be_nil
+        expect(json[:attributes_errors][:password]).not_to be_nil
       end
     end
   end

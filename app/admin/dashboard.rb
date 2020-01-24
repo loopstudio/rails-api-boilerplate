@@ -12,13 +12,13 @@ ActiveAdmin.register_page 'Dashboard' do
     def print_stats(relation)
       total = relation.count
       this_month = relation.extending(WithStatsScopes).this_month.count
-      para("Total: #{total}")
-      para("Created this month: #{this_month}")
+      para("#{I18n.t('active_admin.total')}: #{total}")
+      para("#{I18n.t('active_admin.this_month')}: #{this_month}")
     end
 
     columns do
       column do
-        panel 'Users' do
+        panel I18n.t('activerecord.models.user.other') do
           print_stats(User)
         end
       end

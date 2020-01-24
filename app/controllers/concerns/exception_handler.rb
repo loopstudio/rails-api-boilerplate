@@ -13,6 +13,10 @@ module ExceptionHandler
     render json: { errors: error_messages }, status: status
   end
 
+  def render_attributes_errors(error_messages)
+    render json: { attributes_errors: error_messages }, status: :unprocessable_entity
+  end
+
   def render_standard_error(exception)
     raise exception if Rails.env.test?
 
@@ -31,7 +35,7 @@ module ExceptionHandler
 
   def render_record_invalid(exception)
     errors = exception.record.errors.messages
-    render_errors(errors, :unprocessable_entity)
+    render_attributes_errors(errors)
   end
 
   def set_raven_context

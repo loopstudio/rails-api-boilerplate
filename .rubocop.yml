@@ -78,3 +78,6 @@ Rails/RakeEnvironment:
 
 Rails/NotNullColumn:
   Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false

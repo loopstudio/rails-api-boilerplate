@@ -40,6 +40,4 @@ class User < ApplicationRecord
 
   include DeviseTokenAuth::Concerns::User
   serialize :tokens
-
-  validates :email, presence: true, uniqueness: { case_sensitive: false, scope: :provider }
 end

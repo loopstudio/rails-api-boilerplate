@@ -19,7 +19,7 @@ gem 'sidekiq', '~> 6.0.4'
 
 # Backoffice
 gem 'active_admin_theme', '~> 1.0', '>= 1.0.2'
-gem 'activeadmin', '~> 2.6.0'
+gem 'activeadmin', '~> 2.6.1'
 gem 'activeadmin_addons', '~> 1.7.1'
 gem 'ransack', '~> 2.3.2'
 

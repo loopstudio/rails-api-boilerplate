@@ -198,7 +198,7 @@ GEM
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    pagy (3.7.2)
+    pagy (3.7.3)
     parallel (1.19.1)
     parser (2.7.0.2)
       ast (~> 2.4.0)

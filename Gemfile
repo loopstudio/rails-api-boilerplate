@@ -57,7 +57,7 @@ end
 group :test do
   gem 'rspec-json_expectations', '~> 2.2.0'
   gem 'shoulda-matchers', '~> 4.2.0'
-  gem 'simplecov', '~> 0.18.1'
+  gem 'simplecov', '~> 0.18.2'
   gem 'webmock', '~> 3.8.2'
 end
 

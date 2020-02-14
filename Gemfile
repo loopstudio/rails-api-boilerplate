@@ -15,7 +15,7 @@ gem 'pg', '~> 1.2.2'
 gem 'dotenv-rails', '~> 2.7.4'
 
 # Async worker
-gem 'sidekiq', '~> 6.0.4'
+gem 'sidekiq', '~> 6.0.5'
 
 # Backoffice
 gem 'active_admin_theme', '~> 1.0', '>= 1.0.2'

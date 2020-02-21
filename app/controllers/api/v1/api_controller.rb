@@ -7,7 +7,6 @@ module Api
       include Pagy::Backend
 
       before_action :authenticate_user!
-      before_action :set_raven_context
     end
   end
 end

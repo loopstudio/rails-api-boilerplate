@@ -36,6 +36,9 @@ gem 'pagy', '~> 3.7'
 # Monitoring errors
 gem 'sentry-raven', '~> 3.0.0'
 
+# Translations
+gem 'rails-i18n', '~> 6.0'
+
 group :development, :test do
   gem 'bullet', '~> 6.1.0'
   gem 'byebug', '>= 11.0.1', platforms: %i[mri mingw x64_mingw]

@@ -7,13 +7,15 @@ describe 'PUT /api/v1/users', type: :request do
     {
       user: {
         first_name: first_name,
-        last_name: last_name
+        last_name: last_name,
+        locale: locale
       }
     }
   end
 
   let(:first_name) { 'Darth' }
   let(:last_name) { 'Vader' }
+  let(:locale) { 'es' }
 
   context 'being signed in' do
     subject(:put_request) do
@@ -35,7 +37,8 @@ describe 'PUT /api/v1/users', type: :request do
           id: user.id,
           first_name: user.first_name,
           last_name: user.last_name,
-          email: user.email
+          email: user.email,
+          locale: user.locale
         )
       end
     end

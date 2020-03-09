@@ -3,6 +3,7 @@ module Api
     class SessionsController < DeviseTokenAuth::SessionsController
       include ExceptionHandler
       include ActAsApiRequest
+      include Localizable
       include DeviseTokenAuth::Concerns::SetUserByToken
 
       before_action :authenticate_user!, only: :destroy

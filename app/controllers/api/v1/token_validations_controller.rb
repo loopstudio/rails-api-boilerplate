@@ -3,6 +3,7 @@ module Api
     class TokenValidationsController < DeviseTokenAuth::TokenValidationsController
       include ExceptionHandler
       include ActAsApiRequest
+      include Localizable
 
       def render_validate_token_success
         render :validate

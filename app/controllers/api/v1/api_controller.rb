@@ -3,6 +3,7 @@ module Api
     class ApiController < ActionController::API
       include ExceptionHandler
       include ActAsApiRequest
+      include Localizable
       include DeviseTokenAuth::Concerns::SetUserByToken
       include Pagy::Backend
 

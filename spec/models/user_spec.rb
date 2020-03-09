@@ -14,6 +14,7 @@
 #  last_name              :string
 #  last_sign_in_at        :datetime
 #  last_sign_in_ip        :string
+#  locale                 :string
 #  must_change_password   :boolean          default(FALSE)
 #  provider               :string           default("email"), not null, indexed => [uid]
 #  remember_created_at    :datetime
@@ -40,5 +41,8 @@ describe User, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_uniqueness_of(:email).scoped_to(:provider).case_insensitive }
+    it do
+      is_expected.to validate_inclusion_of(:locale).in_array(I18n.available_locales.map(&:to_s))
+    end
   end
 end

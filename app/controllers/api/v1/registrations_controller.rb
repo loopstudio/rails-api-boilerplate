@@ -3,15 +3,16 @@ module Api
     class RegistrationsController < DeviseTokenAuth::RegistrationsController
       include ExceptionHandler
       include ActAsApiRequest
+      include Localizable
 
       private
 
       def sign_up_params
-        params.require(:user).permit(:email, :password, :first_name, :last_name)
+        params.require(:user).permit(:email, :password, :first_name, :last_name, :locale)
       end
 
       def account_update_params
-        params.require(:user).permit(:email, :first_name, :password, :last_name)
+        params.require(:user).permit(:email, :first_name, :password, :last_name, :locale)
       end
 
       def render_create_success

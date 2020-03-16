@@ -5,7 +5,10 @@ module ExceptionHandler
     rescue_from StandardError, with: :render_standard_error
     rescue_from ActionController::ParameterMissing, with: :render_parameter_missing
     rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found
-    rescue_from ActiveRecord::RecordInvalid, with: :render_record_invalid
+    rescue_from ActionView::Template::Error, with: :handle_template_error
+    rescue_from ActiveRecord::RecordInvalid, with: :handle_record_invalid
+
+    before_action :set_raven_context
   end
 
   def render_errors(error_messages, status)
@@ -14,7 +17,7 @@ module ExceptionHandler
   end
 
   def render_attributes_errors(error_messages)
-    render json: { attributes_errors: error_messages }, status: :unprocessable_entity
+    render json: { attributes_errors: error_messages }, status: :bad_request
   end
 
   def render_standard_error(exception)
@@ -29,11 +32,20 @@ module ExceptionHandler
     render_errors(I18n.t('errors.missing_param', param: exception.param.to_s), :bad_request)
   end
 
-  def render_record_not_found
-    render_errors(I18n.t('errors.record_not_found'), :not_found)
+  def handle_template_error(exception)
+    cause = exception.cause
+    if cause.is_a?(ActiveRecord::RecordNotFound)
+      render_record_not_found(cause)
+    else
+      render_standard_error(cause)
+    end
   end
 
-  def render_record_invalid(exception)
+  def render_record_not_found(exception)
+    render_errors(I18n.t('errors.record_not_found', exception.model), :not_found)
+  end
+
+  def handle_record_invalid(exception)
     errors = exception.record.errors.messages
     render_attributes_errors(errors)
   end

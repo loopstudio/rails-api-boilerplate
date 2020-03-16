@@ -43,7 +43,7 @@ module Api
       end
 
       def validate_post_data(which, message)
-        render_errors(message, :unprocessable_entity) if which.empty?
+        render_errors(message, :bad_request) if which.empty?
       end
     end
   end

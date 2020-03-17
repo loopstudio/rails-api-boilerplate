@@ -265,14 +265,14 @@ GEM
       railties (>= 5.0)
     rspec-core (3.9.1)
       rspec-support (~> 3.9.1)
-    rspec-expectations (3.9.0)
+    rspec-expectations (3.9.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-json_expectations (2.2.0)
     rspec-mocks (3.9.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
-    rspec-rails (3.9.0)
+    rspec-rails (3.9.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -356,7 +356,7 @@ GEM
     xdan-datetimepicker-rails (2.5.4)
       jquery-rails
       rails (>= 3.2.16)
-    zeitwerk (2.2.2)
+    zeitwerk (2.3.0)
 
 PLATFORMS
   ruby
@@ -385,7 +385,7 @@ DEPENDENCIES
   ransack (~> 2.3.2)
   reek (~> 5.6.0)
   rspec-json_expectations (~> 2.2.0)
-  rspec-rails (~> 3.9.0)
+  rspec-rails (~> 3.9.1)
   rubocop-rails (~> 2.4.2)
   sentry-raven (~> 3.0.0)
   shoulda-matchers (~> 4.3.0)

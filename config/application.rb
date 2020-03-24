@@ -24,5 +24,26 @@ module RailsApiBoilerplate
     config.time_zone = ENV.fetch('TZ', 'Eastern Time (US & Canada)')
     config.active_record.default_timezone = :utc
     config.session_store :cache_store
+
+    ActionMailer::Base.delivery_method = :smtp
+    ActionMailer::Base.smtp_settings = {
+      address: 'smtp.sendgrid.net',
+      port: 25,
+      domain: ENV['MAILER_DOMAIN'],
+      authentication: :plain,
+      user_name: 'apikey',
+      password: ENV['SENDGRID_API_KEY'],
+      enable_starttls_auto: true
+    }
+
+    config.action_mailer.default_url_options = { host: ENV['SERVER_URL'] }
+    config.action_mailer.default_options = {
+      from: ENV['DEFAULT_FROM_EMAIL_ADDRESS']
+    }
+
+    config.generators do |gen|
+      gen.test_framework :rspec
+      gen.fixture_replacement :factory_bot, dir: 'spec/factories'
+    end
   end
 end

@@ -2,9 +2,9 @@ require 'optparse'
 
 task :linters do
   options = {}
-  OptionParser.new do |opts|
+  OptionParser.new { |opts|
     opts.on('-a') { |autofix| options[:autofix] = autofix }
-  end.parse!
+  }.parse!
 
   files_diff = `git diff --diff-filter=ACMRTUXB --name-only origin/master... | \
                xargs | sed "s/\\n/\\s/"`

@@ -75,6 +75,9 @@ You can run the unit tests with `rspec` or `rspec` followed by a specific test f
 With `rake linters` you can run the code analysis tool, you can omit rules with:
 
 - [Rubocop](https://github.com/bbatsov/rubocop/blob/master/config/default.yml) Edit `.rubocop.yml`
+
+  When you update RuboCop version, sometimes you need to change `.rubocop.yml`. If you use [mry](https://github.com/pocke/mry), you can update `.rubocop.yml` to latest version automatically.
+
 - [Reek](https://github.com/troessner/reek#configuration-file) Edit `config.reek`
 
 Pass the `-a` option to auto-fix (only for some linterns).

@@ -13,6 +13,21 @@ AllCops:
 Documentation:
   Enabled: false
 
+Layout/LineLength:
+  Max: 100
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+  Exclude:
+    - config/**/*
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
 Metrics/AbcSize:
   Max: 15
   Exclude:
@@ -45,27 +60,27 @@ Metrics/ModuleLength:
   CountComments: false
   Max: 200
 
-Metrics/LineLength:
-  Max: 100
-  AllowURI: true
-  URISchemes:
-    - http
-    - https
-  Exclude:
-    - config/**/*
-
 Metrics/ParameterLists:
   Max: 5
   CountKeywordArgs: true
 
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
 Style/ModuleFunction:
   Enabled: false
-
-Style/BlockDelimiters:
-  EnforcedStyle: braces_for_chaining
 
 LexicallyScopedActionFilter:
   Exclude:

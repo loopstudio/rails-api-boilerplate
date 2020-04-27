@@ -39,7 +39,7 @@ gem 'sentry-raven', '~> 3.0.0'
 group :development, :test do
   gem 'bullet', '~> 6.1.0'
   gem 'byebug', '>= 11.0.1', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_bot_rails', '~> 5.1.1'
+  gem 'factory_bot_rails', '~> 5.2.0'
   gem 'faker', '~> 2.11.0'
   gem 'rspec-rails', '~> 4.0.0'
 end

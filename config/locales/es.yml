@@ -1,0 +1,29 @@
+es:
+  active_admin:
+    general: General
+    overview: Resumen
+    session_info: Información de inicio de sesión
+    this_month: Este mes
+    total: Total
+    dashboard_welcome:
+      welcome: Bienvenido al Área de Administradores
+      call_to_action: ¡Vé algunas estadísticas!
+  activerecord:
+    models:
+      user:
+        one: Usuario
+        other: Usuarios
+  errors:
+    server: 'Ha ocurrido un error'
+    record_not_found: '%{model} no encontrado'
+    missing_param: 'Falta el siguiente parámetro o el valor está vacío: %{param}'
+    invalid_content_type: 'Content-Type inválido en el encabezado'
+    authentication:
+      invalid_credentials: 'Las credenciales no son válidas'
+      invalid_token: 'El token no es válido'
+  emails:
+    reset_password:
+      recover_account: 'Recuperar cuenta'
+  devise:
+    failure:
+      unauthenticated: 'Se requiere autenticación para realizar esta acción'

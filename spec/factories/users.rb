@@ -14,6 +14,7 @@
 #  last_name              :string
 #  last_sign_in_at        :datetime
 #  last_sign_in_ip        :string
+#  locale                 :string
 #  must_change_password   :boolean          default(FALSE)
 #  provider               :string           default("email"), not null, indexed => [uid]
 #  remember_created_at    :datetime

@@ -3,6 +3,7 @@ module Api
     class PasswordsController < DeviseTokenAuth::PasswordsController
       include ExceptionHandler
       include ActAsApiRequest
+      include Localizable
       include DeviseTokenAuth::Concerns::SetUserByToken
 
       before_action :validate_redirect_url_param, only: []

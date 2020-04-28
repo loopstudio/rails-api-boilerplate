@@ -9,13 +9,15 @@ describe 'POST /api/v1/users', type: :request do
   let(:last_name) { 'Kenobi' }
   let(:email) { 'obikenobi@rebel.com' }
   let(:password) { 'abcd1234' }
+  let(:locale) { 'es' }
   let(:params) do
     {
       user: {
         first_name: first_name,
         last_name: last_name,
         email: email,
-        password: password
+        password: password,
+        locale: locale
       }
     }
   end
@@ -36,7 +38,8 @@ describe 'POST /api/v1/users', type: :request do
         id: created_user.id,
         first_name: created_user.first_name,
         last_name: created_user.last_name,
-        email: created_user.email
+        email: created_user.email,
+        locale: created_user.locale
       )
     end
 

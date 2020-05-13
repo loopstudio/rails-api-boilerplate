@@ -19,7 +19,7 @@ gem 'dotenv-rails', '~> 2.7.4'
 gem 'sidekiq', '~> 6.0.7'
 
 # Backoffice
-gem 'active_admin_theme', '~> 1.0', '>= 1.0.2'
+gem 'active_admin_theme', '~> 1.1'
 gem 'activeadmin', '~> 2.7.0'
 gem 'activeadmin_addons', '~> 1.7.1'
 gem 'ransack', '~> 2.3.2'

@@ -365,6 +365,7 @@ DEPENDENCIES
   pagy (~> 3.8)
   pg (~> 1.2.3)
   puma (~> 4.3)
+  rack (~> 2.2.2)
   rack-cors (~> 1.1.1)
   rails (~> 6.0.2.2)
   ransack (~> 2.3.2)
@@ -382,7 +383,7 @@ DEPENDENCIES
   webmock (~> 3.8.3)
 
 RUBY VERSION
-   ruby 2.6.0p0
+   ruby 2.6.6p146
 
 BUNDLED WITH
    2.1.4

@@ -49,6 +49,9 @@ pagy_headers_merge(pagy)
 render json: records
 ```
 
+#### Nilify Blanks
+The [nilify_blanks](https://github.com/rubiety/nilify_blanks) line on `ApplicationRecord` adds a before validation callback in order to substitute all blank string fields to be `nil` instead, in order to ensure no blank fields are saved on the db.
+
 ## Getting Started
 
 1.  Make sure that you have Rails 6, PostgreSQL, git cli and bundle installed.

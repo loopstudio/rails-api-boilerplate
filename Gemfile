@@ -18,6 +18,9 @@ gem 'dotenv-rails', '~> 2.7.4'
 # Async worker
 gem 'sidekiq', '~> 6.0.7'
 
+# Nullify blank strings before saving to db
+gem 'nilify_blanks', '~> 1.4'
+
 # Backoffice
 gem 'active_admin_theme', '~> 1.1'
 gem 'activeadmin', '~> 2.7.0'

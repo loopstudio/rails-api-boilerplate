@@ -3,15 +3,13 @@ require:
   - ./rubocop/rubocop
 
 AllCops:
+  NewCops: enable
   Exclude:
     - vendor/**/*
     - .circleci/*
     - db/schema.rb
     - bin/bundle
     - rubocop/**/*.rb
-
-Documentation:
-  Enabled: false
 
 Layout/LineLength:
   Max: 100
@@ -21,12 +19,6 @@ Layout/LineLength:
     - https
   Exclude:
     - config/**/*
-
-Lint/RaiseException:
-  Enabled: true
-
-Lint/StructNewOverride:
-  Enabled: true
 
 Metrics/AbcSize:
   Max: 15
@@ -67,22 +59,15 @@ Metrics/ParameterLists:
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
 
+Style/Documentation:
+  Enabled: false
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/HashEachMethods:
-  Enabled: true
+# Rails Cops
 
-Style/HashTransformKeys:
-  Enabled: true
-
-Style/HashTransformValues:
-  Enabled: true
-
-Style/ModuleFunction:
-  Enabled: false
-
-LexicallyScopedActionFilter:
+Rails/LexicallyScopedActionFilter:
   Exclude:
     - app/controllers/**/**
 
@@ -92,7 +77,4 @@ Rails/RakeEnvironment:
     - lib/tasks/auto_annotate_models.rake
 
 Rails/NotNullColumn:
-  Enabled: false
-
-Bundler/OrderedGems:
   Enabled: false

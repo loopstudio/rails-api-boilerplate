@@ -16,23 +16,16 @@ describe 'POST /api/v1/users/password', type: :request do
       expect(response).to have_http_status(:no_content)
     end
 
-    it 'sends an email with the new password' do
+    it 'sends an email with the reset password token' do
       expect {
         post_request
-      }.to have_enqueued_job(ActionMailer::MailDeliveryJob)
-        .with(UserMailer.to_s, 'reset_password_email', 'deliver_now', anything)
+      }.to have_enqueued_email(Devise::Mailer, :reset_password_instructions)
     end
 
-    it 'sets the user to have to change the password' do
+    it 'changes the user reset password token' do
       expect {
         post_request
-      }.to change { user.reload.must_change_password }.from(false).to(true)
-    end
-
-    it 'assigns the user a new password' do
-      expect {
-        post_request
-      }.to change { user.reload.valid_password?('old password') }.from(true).to(false)
+      }.to(change { user.reload.reset_password_token })
     end
   end
 
@@ -49,6 +42,16 @@ describe 'POST /api/v1/users/password', type: :request do
       expect {
         post_request
       }.to change { ActionMailer::Base.deliveries.count }.by(0)
+    end
+  end
+
+  context 'without an email' do
+    let(:params) { { email: nil } }
+
+    specify do
+      post_request
+
+      expect(response).to have_http_status(:unauthorized)
     end
   end
 end

@@ -20,6 +20,10 @@ en:
       confirmation_instructions:
         subject: "Confirmation instructions"
       reset_password_instructions:
+        action: Recover Password
+        instruction: Find below the code to change your password
+        instruction_2: If you did not request this email please ignore it
+        instruction_3: Thanks!
         subject: "Reset password instructions"
       unlock_instructions:
         subject: "Unlock instructions"

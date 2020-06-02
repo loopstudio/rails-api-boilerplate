@@ -7,38 +7,46 @@ module Api
       include DeviseTokenAuth::Concerns::SetUserByToken
 
       before_action :validate_redirect_url_param, only: []
-      before_action :validate_email_param, only: :create
-      before_action :authenticate_user!, only: :update
-      before_action :validate_password_param, only: :update
 
-      def create
-        email = get_case_insensitive_field_from_resource_params(:email)
-        user = User.find_by!(email: email)
-        ::Auth::ResetPasswordService.call(user)
-        head(:no_content)
+      def edit
+        @resource = resource_class.with_reset_password_token(resource_params[:reset_password_token])
+
+        head(:not_found) && return unless @resource
+
+        head(:no_content) && return if @resource.reset_password_period_valid?
+
+        render_token_expired
       end
 
       def update
-        current_user.update!(
-          password: password_resource_params[:password],
-          must_change_password: false
-        )
+        @resource = resource_class.reset_password_by_token(update_params)
+        errors = @resource.errors
 
-        head(:no_content)
+        if errors.empty?
+          response.headers.merge!(@resource.create_new_auth_token)
+          render_update_success
+        else
+          token_error = errors[:reset_password_token].any?
+          token_error ? render_token_expired : render_attributes_errors(errors)
+        end
       end
 
       private
 
-      def validate_email_param
-        return if resource_params[:email]
-
-        raise(ActionController::ParameterMissing, :email)
+      def render_create_success
+        head(:no_content)
       end
 
-      def validate_password_param
-        return if password_resource_params[:password]
+      def render_update_success
+        render('api/v1/users/show', locals: { user: @resource })
+      end
 
-        raise(ActionController::ParameterMissing, :password)
+      def render_token_expired
+        render_errors([I18n.t('errors.messages.reset_password_token_expired')], :bad_request)
+      end
+
+      def update_params
+        params.permit(:reset_password_token, :password, :password_confirmation)
       end
     end
   end

@@ -126,7 +126,8 @@ detectors:
     exclude: []
   UtilityFunction:
     enabled: true
-    exclude: []
+    exclude:
+      - Devise::TokenGenerator
     public_methods_only: false
 
 directories:

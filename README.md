@@ -143,6 +143,26 @@ You need to add the following Secrets:
 
 * If you use a different branching strategy or different environments layout, simply delete the files under the workflows directory and set up your own.
 
+### Password reset flow
+
+* Request for a password reset at `/users/password` with the following body:
+```json
+{
+  "email": "<EMAIL_TO_CHANGE>"
+}
+```
+Where `<EMAIL_TO_CHANGE>` should be a registered email or you will get the corresponding message on the response.
+
+* An email is sent to that address with a 6 digit code.
+* With a `GET` request to `users/password/edit?reset_password_token=<TOKEN>` you can verify the token validity.
+* And to change the password you should send a `PUT` request to `users/password` with the following body:
+```json
+{
+  "reset_password_token": "<TOKEN>",
+  "password": "<NEW_PASSWORD>"
+}
+```
+
 ## Contributing
 
 If you've noticed a bug or find something that needs to be refactored, feel free to open an issue or even better, a Pull Request!

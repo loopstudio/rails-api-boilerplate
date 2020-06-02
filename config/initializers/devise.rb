@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative '../../lib/gem_extensions/devise/token_generator'
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -288,3 +289,5 @@ Devise.setup do |config|
   #   include Turbolinks::Controller
   # end
 end
+
+Devise::TokenGenerator.prepend(::GemExtensions::Devise::TokenGenerator)

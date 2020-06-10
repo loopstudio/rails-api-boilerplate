@@ -1,4 +1,4 @@
-<img src="" alt="rails boilerplate banner" align="center" />
+![image](https://user-images.githubusercontent.com/15303963/84329647-a19cc180-ab5b-11ea-9469-09606895bbbf.png)
 
 <div align="center"><strong>Start your next Rails 6 API project in seconds</strong></div>
 

@@ -5,7 +5,7 @@
 ![Github Actions badge](https://github.com/loopstudio/rails-api-boilerplate/workflows/Tests%20and%20Linters/badge.svg)
 [![Codebeat badge](https://codebeat.co/badges/eaad967a-50bd-41b9-be06-e59a516cb732)](https://codebeat.co/a/loopstudio/projects/github-com-loopstudio-rails-api-boilerplate-master)
 
-<sub> Created and maintained with ❤️ by <a href="[https://loopstudio.dev/](https://loopstudio.dev/)">Loop Studio</a> </sub>
+<sub> Created and maintained with ❤️ by <a href="[https://loopstudio.dev/](https://loopstudio.dev/)">LoopStudio</a> </sub>
 
 <div align="center">A foundation with focus on performance and best practices</div>
 
@@ -151,7 +151,7 @@ If you've noticed a bug or find something that needs to be refactored, feel free
 
 This project is licensed under the MIT license.
 
-Copyright (c) 2020 Loop Studio.
+Copyright (c) 2020 LoopStudio.
 
 For more information see [`LICENSE`](LICENSE)
 

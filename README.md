@@ -151,7 +151,7 @@ If you've noticed a bug or find something that needs to be refactored, feel free
 
 This project is licensed under the MIT license.
 
-Copyright (c) 2019 Loop Studio.
+Copyright (c) 2020 Loop Studio.
 
 For more information see [`LICENSE`](LICENSE)
 

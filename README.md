@@ -2,8 +2,8 @@
 
 <div align="center"><strong>Start your next Rails 6 API project in seconds</strong></div>
 
-[![CircleCI](https://circleci.com/gh/loopstudio/rails-api-boilerplate.svg?style=svg&circle-token=de33ad2b6d5c55959e90ad4fd4edd4120da1070b)](https://circleci.com/gh/loopstudio/rails-api-boilerplate)
-[![codebeat badge](https://codebeat.co/badges/eaad967a-50bd-41b9-be06-e59a516cb732)](https://codebeat.co/a/loopstudio/projects/github-com-loopstudio-rails-api-boilerplate-master)
+![Github Actions badge](https://github.com/loopstudio/rails-api-boilerplate/workflows/Tests%20and%20Linters/badge.svg)
+[![Codebeat badge](https://codebeat.co/badges/eaad967a-50bd-41b9-be06-e59a516cb732)](https://codebeat.co/a/loopstudio/projects/github-com-loopstudio-rails-api-boilerplate-master)
 
 <sub> Created and maintained with ❤️ by <a href="[https://loopstudio.dev/](https://loopstudio.dev/)">Loop Studio</a> </sub>
 

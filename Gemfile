@@ -28,7 +28,7 @@ gem 'activeadmin_addons', '~> 1.7.1'
 gem 'ransack', '~> 2.3.2'
 
 # Authentication
-gem 'devise', '~> 4.7.1'
+gem 'devise', '~> 4.7.2'
 gem 'devise_token_auth', '~> 1.1.4'
 
 # Serializing json views

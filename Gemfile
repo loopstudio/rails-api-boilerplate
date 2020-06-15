@@ -6,7 +6,7 @@ gem 'rails', '~> 6.0.3'
 
 # WebServer
 gem 'puma', '~> 4.3'
-gem 'rack', '~> 2.2.2'
+gem 'rack', '~> 2.2.3'
 gem 'rack-cors', '~> 1.1.1'
 
 # Database

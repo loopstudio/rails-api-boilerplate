@@ -20,7 +20,7 @@
 
 ## Main Characteristics
 
-- Language: Ruby 2.6.6+
+- Language: Ruby 2.7.1+
 - Framework: Rails 6.0.3+
 - Webserver: Puma
 - Test Framework: Rspec

@@ -12,7 +12,6 @@ require 'action_text/engine'
 require 'action_view/railtie'
 require 'action_cable/engine'
 require 'rails/test_unit/railtie'
-require 'sprockets/railtie'
 
 Bundler.require(*Rails.groups)
 
@@ -23,7 +22,6 @@ module RailsApiBoilerplate
     config.active_job.queue_adapter = :sidekiq
     config.time_zone = ENV.fetch('TZ', 'Eastern Time (US & Canada)')
     config.active_record.default_timezone = :utc
-    config.session_store :cache_store
 
     ActionMailer::Base.delivery_method = :smtp
     ActionMailer::Base.smtp_settings = {

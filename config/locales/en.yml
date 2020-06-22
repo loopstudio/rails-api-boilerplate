@@ -20,7 +20,8 @@ en:
     invalid_content_type: 'Invalid content type header'
     authentication:
       invalid_credentials: 'The credentials are not valid'
-      invalid_token: 'Token not valid'
+      invalid_token: 'The token is not valid'
+      invalid_password_check: 'The current password is not valid'
   emails:
     reset_password:
       recover_account: 'Recover account'

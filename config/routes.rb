@@ -11,11 +11,19 @@ Rails.application.routes.draw do
     sessions: 'api/v1/sessions',
     passwords: 'api/v1/passwords',
     token_validations: 'api/v1/token_validations'
-  }, skip: [:omniauth_callbacks]
+  }, skip: %i[omniauth_callbacks registrations]
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resource :users, only: :show
+      resource :user, only: %i[show update]
+
+      devise_scope :user do
+        resources :users, only: [] do
+          controller :registrations do
+            post :create, on: :collection
+          end
+        end
+      end
     end
   end
 end

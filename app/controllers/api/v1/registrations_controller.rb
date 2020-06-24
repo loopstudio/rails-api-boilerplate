@@ -11,32 +11,8 @@ module Api
         params.require(:user).permit(:email, :password, :first_name, :last_name, :locale)
       end
 
-      def account_update_params
-        params.require(:user).permit(:email, :first_name, :password, :last_name, :locale)
-      end
-
       def render_create_success
         render :create
-      end
-
-      def render_update_success
-        render :update
-      end
-
-      def render_destroy_success
-        head :no_content
-      end
-
-      def render_update_error
-        raise ActiveRecord::RecordInvalid, @resource
-      end
-
-      def render_update_error_user_not_found
-        render_errors(I18n.t('devise.failure.unauthenticated'), :unauthorized)
-      end
-
-      def render_destroy_error
-        render_errors(I18n.t('devise.failure.unauthenticated'), :unauthorized)
       end
 
       def render_create_error

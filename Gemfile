@@ -16,7 +16,7 @@ gem 'pg', '~> 1.2.3'
 gem 'dotenv-rails', '~> 2.7.4'
 
 # Async worker
-gem 'sidekiq', '~> 6.0.7'
+gem 'sidekiq', '~> 6.1.0'
 
 # Nullify blank strings before saving to db
 gem 'nilify_blanks', '~> 1.4'

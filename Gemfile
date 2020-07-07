@@ -22,9 +22,9 @@ gem 'sidekiq', '~> 6.0.7'
 gem 'nilify_blanks', '~> 1.4'
 
 # Backoffice
-gem 'active_admin_theme', '~> 1.1'
 gem 'activeadmin', '~> 2.7.0'
 gem 'activeadmin_addons', '~> 1.7.1'
+gem 'active_admin_theme', '~> 1.1'
 gem 'ransack', '~> 2.3.2'
 
 # Authentication
@@ -53,7 +53,7 @@ group :development do
   gem 'letter_opener', '~> 1.7.0'
   gem 'listen', '>= 3.0.5', '< 3.3'
   gem 'reek', '~> 6.0.1', require: false
-  gem 'rubocop', '~> 0.86.0', require: false
+  gem 'rubocop', '~> 0.87.0', require: false
   gem 'rubocop-rails', '~> 2.6.0', require: false
   gem 'spring', '~> 2.1.0'
   gem 'spring-watcher-listen', '~> 2.0.0'

@@ -115,10 +115,10 @@ GEM
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
     erubi (1.9.0)
-    factory_bot (6.0.0)
+    factory_bot (6.1.0)
       activesupport (>= 5.0.0)
-    factory_bot_rails (6.0.0)
-      factory_bot (~> 6.0.0)
+    factory_bot_rails (6.1.0)
+      factory_bot (~> 6.1.0)
       railties (>= 5.0.0)
     faker (2.13.0)
       i18n (>= 1.6, < 2)
@@ -186,7 +186,7 @@ GEM
       activerecord (>= 4.0.0)
       activesupport (>= 4.0.0)
     nio4r (2.5.2)
-    nokogiri (1.10.9)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     pagy (3.8.2)
@@ -345,7 +345,7 @@ GEM
     xdan-datetimepicker-rails (2.5.4)
       jquery-rails
       rails (>= 3.2.16)
-    zeitwerk (2.3.0)
+    zeitwerk (2.3.1)
 
 PLATFORMS
   ruby
@@ -361,7 +361,7 @@ DEPENDENCIES
   devise (~> 4.7.2)
   devise_token_auth (~> 1.1.4)
   dotenv-rails (~> 2.7.4)
-  factory_bot_rails (~> 6.0.0)
+  factory_bot_rails (~> 6.1.0)
   faker (~> 2.13.0)
   jb (~> 0.7.1)
   letter_opener (~> 1.7.0)

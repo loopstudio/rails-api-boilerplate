@@ -13,7 +13,7 @@ gem 'rack-cors', '~> 1.1.1'
 gem 'pg', '~> 1.2.3'
 
 # Environment variables
-gem 'dotenv-rails', '~> 2.7.4'
+gem 'dotenv-rails', '~> 2.7.6'
 
 # Async worker
 gem 'sidekiq', '~> 6.1.0'

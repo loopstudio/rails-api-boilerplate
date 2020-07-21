@@ -12,7 +12,7 @@ module ExceptionHandler
   end
 
   def render_errors(error_messages, status)
-    error_messages = [error_messages] unless error_messages.is_a?(Array)
+    error_messages = Array(error_messages)
     render json: { errors: error_messages }, status: status
   end
 

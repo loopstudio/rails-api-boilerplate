@@ -48,6 +48,7 @@ pagy, records = pagy(User.all)
 pagy_headers_merge(pagy)
 render json: records
 ```
+The frontend needs to pass the query param `page` to retrieve a specific page.
 
 #### Nilify Blanks
 The [nilify_blanks](https://github.com/rubiety/nilify_blanks) line on `ApplicationRecord` adds a before validation callback to substitute all blank string fields to be `nil` instead, to ensure no blank fields are saved on the db.

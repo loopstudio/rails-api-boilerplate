@@ -18,6 +18,7 @@ en:
     record_not_found: '%{model} not found'
     missing_param: 'The following param is missing or the value is empty: %{param}'
     invalid_content_type: 'Invalid content type header'
+    page_not_found: 'The requested page does not exist'
     authentication:
       invalid_credentials: 'The credentials are not valid'
       invalid_token: 'The token is not valid'

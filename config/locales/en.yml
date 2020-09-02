@@ -1,5 +1,7 @@
 en:
   active_admin:
+    charts:
+      sign_ups_per_month: 'Sign ups per month'
     general: General
     overview: Overview
     session_info: Sign in info

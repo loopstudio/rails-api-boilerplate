@@ -21,6 +21,10 @@ ActiveAdmin.register_page 'Dashboard' do
         panel I18n.t('activerecord.models.user.other') do
           print_stats(User)
         end
+
+        panel I18n.t('active_admin.charts.sign_ups_per_month') do
+          render 'sign_ups_per_month', { users: User.group_by_month(:created_at).count }
+        end
       end
     end
   end

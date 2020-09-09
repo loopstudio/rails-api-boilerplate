@@ -15,7 +15,7 @@ module Api
 
         head(:no_content) && return if @resource.reset_password_period_valid?
 
-        render_token_expired
+        render_token_invalid
       end
 
       def update
@@ -26,8 +26,8 @@ module Api
           response.headers.merge!(@resource.create_new_auth_token)
           render_update_success
         else
-          token_error = errors[:reset_password_token].any?
-          token_error ? render_token_expired : render_attributes_errors(errors)
+          token_error = errors.messages.key?(:reset_password_token)
+          token_error ? render_token_invalid : render_attributes_errors(errors)
         end
       end
 
@@ -41,8 +41,8 @@ module Api
         render('api/v1/users/show', locals: { user: @resource })
       end
 
-      def render_token_expired
-        render_errors([I18n.t('errors.messages.reset_password_token_expired')], :bad_request)
+      def render_token_invalid
+        render_errors([I18n.t('errors.invalid_reset_password_token')], :bad_request)
       end
 
       def update_params

@@ -1,5 +1,6 @@
 require:
   - rubocop-rails
+  - rubocop-rspec
   - ./rubocop/rubocop
 
 AllCops:

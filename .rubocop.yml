@@ -1,3 +1,12 @@
+inherit_from:
+  - .rubocop_todo.yml
+  - ./rubocop/rubocop_rails.yml
+  - ./rubocop/rubocop_rspec.yml
+
+inherit_mode:
+  merge:
+    - Exclude
+
 require:
   - rubocop-rails
   - rubocop-rspec
@@ -65,26 +74,3 @@ Style/Documentation:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
-
-
-# Rails Cops
-
-Rails/LexicallyScopedActionFilter:
-  Exclude:
-    - app/controllers/**/**
-
-Rails/RakeEnvironment:
-  Exclude:
-    - lib/tasks/linters.rake
-    - lib/tasks/auto_annotate_models.rake
-
-Rails/NotNullColumn:
-  Enabled: false
-
-
-# RSpec Cops
-
-RSpec/ImplicitSubject:
-  EnforcedStyle: single_statement_only
-
-

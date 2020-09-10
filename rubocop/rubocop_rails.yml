@@ -1,0 +1,11 @@
+Rails/LexicallyScopedActionFilter:
+  Exclude:
+    - app/controllers/**/**
+
+Rails/RakeEnvironment:
+  Exclude:
+    - lib/tasks/linters.rake
+    - lib/tasks/auto_annotate_models.rake
+
+Rails/NotNullColumn:
+  Enabled: false

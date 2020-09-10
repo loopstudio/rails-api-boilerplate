@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'PUT /api/v1/user', type: :request do
   let(:user) { create(:user) }
 
-  context 'being signed in' do
+  context 'when being signed in' do
     subject(:put_request) do
       put api_v1_user_path, params: params, headers: auth_headers, as: :json
     end
@@ -23,7 +23,7 @@ describe 'PUT /api/v1/user', type: :request do
       end
     end
 
-    context 'not changing the password' do
+    context 'when not changing the password' do
       let(:params) do
         {
           user: {
@@ -47,7 +47,7 @@ describe 'PUT /api/v1/user', type: :request do
       it_behaves_like 'returns the user data'
     end
 
-    context 'changing the password' do
+    context 'when changing the password' do
       let(:old_password) { 'oldPassword' }
       let(:new_password) { 'newPassword' }
       let(:user) { create(:user, password: old_password) }
@@ -141,7 +141,7 @@ describe 'PUT /api/v1/user', type: :request do
     end
   end
 
-  context 'not being signed in' do
+  context 'when not being signed in' do
     subject(:not_signed_in_request) do
       put api_v1_user_path, as: :json
     end

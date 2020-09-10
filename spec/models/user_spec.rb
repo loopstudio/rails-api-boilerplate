@@ -41,7 +41,8 @@ describe User, type: :model do
   describe 'validations' do
     it { is_expected.to validate_presence_of(:email) }
     it { is_expected.to validate_uniqueness_of(:email).scoped_to(:provider).case_insensitive }
-    it do
+
+    specify do
       is_expected.to validate_inclusion_of(:locale).in_array(I18n.available_locales.map(&:to_s))
     end
   end

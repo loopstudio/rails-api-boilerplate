@@ -49,7 +49,7 @@ describe 'POST /api/v1/users', type: :request do
       token = response.header['access-token']
       client = response.header['client']
 
-      expect(created_user.reload.valid_token?(token, client)).to be_truthy
+      expect(created_user.reload).to be_valid_token(token, client)
     end
   end
 

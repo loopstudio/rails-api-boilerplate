@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'DELETE /api/v1/users/sign_out', type: :request do
   let(:user) { create(:user) }
 
-  context 'being signed in' do
+  context 'when being signed in' do
     subject(:delete_request) do
       delete destroy_user_session_path, headers: auth_headers, as: :json
     end
@@ -24,7 +24,7 @@ describe 'DELETE /api/v1/users/sign_out', type: :request do
     end
   end
 
-  context 'not being signed in' do
+  context 'when not being signed in' do
     subject(:not_signed_in_request) do
       delete destroy_user_session_path, as: :json
     end

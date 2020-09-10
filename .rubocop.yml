@@ -66,6 +66,7 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+
 # Rails Cops
 
 Rails/LexicallyScopedActionFilter:
@@ -79,3 +80,11 @@ Rails/RakeEnvironment:
 
 Rails/NotNullColumn:
   Enabled: false
+
+
+# RSpec Cops
+
+RSpec/ImplicitSubject:
+  EnforcedStyle: single_statement_only
+
+

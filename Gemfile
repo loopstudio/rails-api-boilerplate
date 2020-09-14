@@ -65,7 +65,7 @@ group :test do
   gem 'rspec-json_expectations', '~> 2.2.0'
   gem 'shoulda-matchers', '~> 4.4.1'
   gem 'simplecov', '~> 0.19.0'
-  gem 'webmock', '~> 3.8.3'
+  gem 'webmock', '~> 3.9.1'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

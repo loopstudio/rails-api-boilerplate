@@ -72,6 +72,12 @@ describe 'PUT api/v1/users/password/', type: :request do
         expect(response).to have_http_status(:bad_request)
       end
 
+      specify do
+        put_request
+
+        expect(json[:attributes_errors]).not_to have_key('reset_password_token')
+      end
+
       it 'does not change the user password' do
         expect {
           put_request

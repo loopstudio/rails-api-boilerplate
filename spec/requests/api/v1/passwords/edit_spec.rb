@@ -42,10 +42,10 @@ describe 'GET api/v1/users/password/edit', type: :request do
       expect(response).to have_http_status(:bad_request)
     end
 
-    it 'renders an error message explaining the code expired' do
+    it 'renders an error message explaining the code is invalid' do
       get_request
 
-      expect(json[:errors]).to include(I18n.t('errors.messages.reset_password_token_expired'))
+      expect(json[:errors]).to include(I18n.t('errors.invalid_reset_password_token'))
     end
   end
 

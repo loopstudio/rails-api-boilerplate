@@ -21,6 +21,7 @@ en:
     missing_param: 'The following param is missing or the value is empty: %{param}'
     invalid_content_type: 'Invalid content type header'
     page_not_found: 'The requested page does not exist'
+    invalid_reset_password_token: 'the reset password token is invalid'
     authentication:
       invalid_credentials: 'The credentials are not valid'
       invalid_token: 'The token is not valid'

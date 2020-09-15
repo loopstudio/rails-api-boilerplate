@@ -21,6 +21,7 @@ es:
     missing_param: 'Falta el siguiente parámetro o el valor está vacío: %{param}'
     invalid_content_type: 'Content-Type inválido en el encabezado'
     page_not_found: 'La página solicitada no existe'
+    reset_password_token_invalid: 'el token para restablecer la contraseña no es válido'
     authentication:
       invalid_credentials: 'Las credenciales no son válidas'
       invalid_token: 'El token no es válido'

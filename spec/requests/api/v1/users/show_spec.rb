@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'GET /api/v1/user', type: :request do
   let(:user) { create(:user) }
 
-  context 'being signed in' do
+  context 'when being signed in' do
     subject(:get_request) do
       get api_v1_user_path, headers: auth_headers, as: :json
     end
@@ -27,7 +27,7 @@ describe 'GET /api/v1/user', type: :request do
     end
   end
 
-  context 'not being signed in' do
+  context 'when not being signed in' do
     subject(:not_sign_in_request) do
       get api_v1_user_path, as: :json
     end

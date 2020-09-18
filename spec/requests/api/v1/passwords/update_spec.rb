@@ -54,7 +54,7 @@ describe 'PUT api/v1/users/password/', type: :request do
 
         token = response.header['access-token']
         client = response.header['client']
-        expect(user.reload.valid_token?(token, client)).to be_truthy
+        expect(user.reload).to be_valid_token(token, client)
       end
     end
 
@@ -81,7 +81,7 @@ describe 'PUT api/v1/users/password/', type: :request do
       it 'does not change the user password' do
         expect {
           put_request
-        }.to_not change(user.reload, :encrypted_password)
+        }.not_to change(user.reload, :encrypted_password)
       end
     end
   end
@@ -103,13 +103,13 @@ describe 'PUT api/v1/users/password/', type: :request do
     it 'does not change the user password' do
       expect {
         put_request
-      }.to_not change(user.reload, :encrypted_password)
+      }.not_to change(user.reload, :encrypted_password)
     end
 
     it 'does not make the new password valid' do
       put_request
 
-      expect(user.reload.valid_password?(new_password)).to_not be
+      expect(user.reload).not_to be_valid_password(new_password)
     end
   end
 end

@@ -17,7 +17,7 @@ RSpec.describe RuboCop::Cop::Migration::AddIndex do
     allow(cop).to receive(:in_migration?).and_return(true)
   end
 
-  context 'concurrently without disable_ddl_transaction!' do
+  context 'with concurrently and without disable_ddl_transaction!' do
     it 'reports an offense' do
       expect_offense(<<~RUBY)
         class Migration
@@ -30,7 +30,7 @@ RSpec.describe RuboCop::Cop::Migration::AddIndex do
     end
   end
 
-  context 'not concurrently without disable_ddl_transaction!' do
+  context 'without concurrently and without disable_ddl_transaction!' do
     it 'reports an offense' do
       expect_offense(<<~RUBY)
         class Migration
@@ -44,7 +44,7 @@ RSpec.describe RuboCop::Cop::Migration::AddIndex do
     end
   end
 
-  context 'concurrently with disable_ddl_transaction!' do
+  context 'with concurrently and with disable_ddl_transaction!' do
     it 'does not report an offense' do
       expect_no_offenses(<<~RUBY)
         class Migration
@@ -57,7 +57,7 @@ RSpec.describe RuboCop::Cop::Migration::AddIndex do
     end
   end
 
-  context 'not concurrently with disable_ddl_transaction!' do
+  context 'without concurrently and with disable_ddl_transaction!' do
     it 'reports an offense' do
       expect_offense(<<~RUBY)
         class Migration

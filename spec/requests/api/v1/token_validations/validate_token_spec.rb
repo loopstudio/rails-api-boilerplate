@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'GET /api/v1/users/validate_token', type: :request do
   let(:user) { create(:user) }
 
-  context 'being signed in' do
+  context 'when being signed in' do
     subject(:get_request) do
       get api_v1_users_validate_token_path, headers: auth_headers, as: :json
     end
@@ -32,11 +32,11 @@ describe 'GET /api/v1/users/validate_token', type: :request do
       token = response.header['access-token']
       client = response.header['client']
 
-      expect(user.reload.valid_token?(token, client)).to be_truthy
+      expect(user.reload).to be_valid_token(token, client)
     end
   end
 
-  context 'not being signed in' do
+  context 'when not being signed in' do
     subject(:not_signed_in_request) do
       get api_v1_users_validate_token_path, as: :json
     end

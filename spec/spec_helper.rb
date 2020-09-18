@@ -23,7 +23,7 @@ RSpec.configure do |config|
     ActiveJob::Base.queue_adapter = :test
   end
 
-  config.after(:each) do
+  config.after do
     FileUtils.rm_rf(Dir[Rails.root.join('/spec/support/uploads').to_s])
   end
 end

@@ -1,0 +1,2 @@
+RSpec/ImplicitSubject:
+  EnforcedStyle: single_statement_only

@@ -11,9 +11,7 @@ module Api
       def edit
         @resource = resource_class.with_reset_password_token(resource_params[:reset_password_token])
 
-        head(:not_found) && return unless @resource
-
-        head(:no_content) && return if @resource.reset_password_period_valid?
+        head(:no_content) && return if @resource&.reset_password_period_valid?
 
         render_token_invalid
       end

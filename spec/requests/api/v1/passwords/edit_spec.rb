@@ -24,18 +24,7 @@ describe 'GET api/v1/users/password/edit', type: :request do
     end
   end
 
-  context 'with an expired token' do
-    let(:params) do
-      {
-        reset_password_token: password_token
-      }
-    end
-
-    before do
-      sent_at = user.reset_password_sent_at - Devise.reset_password_within - 1.second
-      user.update!(reset_password_sent_at: sent_at)
-    end
-
+  shared_examples 'returns invalid token error' do
     specify do
       get_request
 
@@ -49,6 +38,21 @@ describe 'GET api/v1/users/password/edit', type: :request do
     end
   end
 
+  context 'with an expired token' do
+    let(:params) do
+      {
+        reset_password_token: password_token
+      }
+    end
+
+    before do
+      sent_at = user.reset_password_sent_at - Devise.reset_password_within - 1.second
+      user.update!(reset_password_sent_at: sent_at)
+    end
+
+    include_examples 'returns invalid token error'
+  end
+
   context 'with an invalid token' do
     let(:params) do
       {
@@ -56,10 +60,6 @@ describe 'GET api/v1/users/password/edit', type: :request do
       }
     end
 
-    specify do
-      get_request
-
-      expect(response).to have_http_status(:not_found)
-    end
+    include_examples 'returns invalid token error'
   end
 end

@@ -28,7 +28,7 @@ module ExceptionHandler
   end
 
   def render_record_not_found(exception)
-    render_errors(I18n.t('errors.record_not_found', exception.model), :not_found)
+    render_errors(I18n.t('errors.record_not_found', model: exception.model), :not_found)
   end
 
   def render_record_invalid(exception)

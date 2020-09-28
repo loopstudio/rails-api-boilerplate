@@ -40,7 +40,7 @@ gem 'jb', '~> 0.7.1'
 gem 'pagy', '~> 3.8'
 
 # Monitoring errors
-gem 'sentry-raven', '~> 3.1.0'
+gem 'sentry-raven', '~> 3.1.1'
 
 group :development, :test do
   gem 'bullet', '~> 6.1.0'

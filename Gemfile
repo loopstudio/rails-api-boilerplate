@@ -25,7 +25,7 @@ gem 'nilify_blanks', '~> 1.4'
 gem 'activeadmin', '~> 2.8.1'
 gem 'activeadmin_addons', '~> 1.7.1'
 gem 'active_admin_theme', '~> 1.1'
-gem 'chartkick', '~> 3.4.0'
+gem 'chartkick', '~> 3.4.1'
 gem 'groupdate', '~> 5.2.1'
 gem 'ransack', '~> 2.3.2'
 

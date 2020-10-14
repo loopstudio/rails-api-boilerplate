@@ -11,7 +11,9 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
     resource '*',
              headers: :any,
-             expose: %w[access-token expiry token-type uid client],
+             expose: %w[access-token expiry token-type uid
+                        client Link Current-Page Page-Items
+                        Total-Pages Total-Count],
              methods: %i[get post put patch delete options head]
   end
 end

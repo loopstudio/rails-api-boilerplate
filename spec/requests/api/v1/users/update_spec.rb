@@ -52,73 +52,36 @@ describe 'PUT /api/v1/user', type: :request do
       let(:new_password) { 'newPassword' }
       let(:user) { create(:user, password: old_password) }
 
+      shared_examples 'invalid password' do
+        before { put_request }
+
+        it { expect(response).to have_http_status(:bad_request) }
+        it { expect(json[:errors]).to include('The current password is not valid') }
+        it { expect(user.reload.valid_password?(old_password)).to be(true) }
+        it { expect(user.reload.valid_password?(new_password)).to be(false) }
+      end
+
       context 'without the password check' do
-        let(:params) do
-          {
-            user: {
-              password: new_password
-            }
-          }
-        end
+        let(:params) { { user: { password: new_password } } }
 
-        specify do
-          put_request
-
-          expect(response).to have_http_status(:bad_request)
-        end
-
-        it 'returns an error' do
-          put_request
-
-          expect(json[:errors]).to include('The current password is not valid')
-        end
-
-        it 'does not update the user password' do
-          put_request
-
-          user.reload
-          expect(user.valid_password?(old_password)).to eq(true)
-          expect(user.valid_password?(new_password)).to eq(false)
-        end
+        include_examples 'invalid password'
       end
 
       context 'with an invalid password check' do
         let(:params) do
           {
-            user: {
-              password: new_password
-            },
+            user: { password: new_password },
             password_check: 'notThePassword'
           }
         end
 
-        specify do
-          put_request
-
-          expect(response).to have_http_status(:bad_request)
-        end
-
-        it 'returns an error' do
-          put_request
-
-          expect(json[:errors]).to include('The current password is not valid')
-        end
-
-        it 'does not update the user password' do
-          put_request
-
-          user.reload
-          expect(user.valid_password?(old_password)).to eq(true)
-          expect(user.valid_password?(new_password)).to eq(false)
-        end
+        include_examples 'invalid password'
       end
 
       context 'with the correct password check' do
         let(:params) do
           {
-            user: {
-              password: new_password
-            },
+            user: { password: new_password },
             password_check: old_password
           }
         end

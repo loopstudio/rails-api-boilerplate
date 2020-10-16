@@ -11,11 +11,9 @@ RSpec.describe RuboCop::Cop::Migration::AddIndex do
   include CopHelper
   include RuboCop::RSpec::ExpectOffense
 
-  subject(:cop) { described_class.new }
+  let(:cop) { described_class.new }
 
-  before do
-    allow(cop).to receive(:in_migration?).and_return(true)
-  end
+  before { allow(cop).to receive(:in_migration?).and_return(true) }
 
   context 'with concurrently and without disable_ddl_transaction!' do
     it 'reports an offense' do

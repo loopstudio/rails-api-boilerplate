@@ -340,7 +340,7 @@ GEM
     uniform_notifier (1.13.0)
     warden (1.2.9)
       rack (>= 2.0.9)
-    webmock (3.9.2)
+    webmock (3.9.3)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -394,7 +394,7 @@ DEPENDENCIES
   spring (~> 2.1.1)
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
-  webmock (~> 3.9.2)
+  webmock (~> 3.9.3)
 
 RUBY VERSION
    ruby 2.7.1p83

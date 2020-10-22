@@ -5,19 +5,16 @@ describe 'POST /api/v1/users', type: :request do
     post api_v1_users_path, params: params, as: :json
   end
 
-  let(:first_name) { 'Obi Wan' }
-  let(:last_name) { 'Kenobi' }
   let(:email) { 'obikenobi@rebel.com' }
   let(:password) { 'abcd1234' }
-  let(:locale) { 'es' }
   let(:params) do
     {
       user: {
-        first_name: first_name,
-        last_name: last_name,
+        first_name: 'Obi Wan',
+        last_name: 'Kenobi',
         email: email,
         password: password,
-        locale: locale
+        locale: 'es'
       }
     }
   end

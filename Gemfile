@@ -8,10 +8,7 @@ gem 'rails', '~> 6.0.3'
 gem 'puma', '~> 5.2'
 gem 'rack', '~> 2.2.3'
 gem 'rack-cors', '~> 1.1.1'
-
-# Rack middleware for blocking & throttling abusive requests
 gem 'rack-attack'
-
 # Database
 gem 'pg', '~> 1.2.3'
 gem 'strong_migrations', '~> 0.7.6'

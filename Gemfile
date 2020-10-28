@@ -34,7 +34,7 @@ gem 'devise', '~> 4.7.3'
 gem 'devise_token_auth', '~> 1.1.4'
 
 # Serializing json views
-gem 'jb', '~> 0.7.1'
+gem 'jb', '~> 0.8.0'
 
 # Pagination
 gem 'pagy', '~> 3.9'

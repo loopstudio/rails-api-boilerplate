@@ -17,6 +17,7 @@ AllCops:
   Exclude:
     - vendor/**/*
     - .circleci/*
+    - db/migrate/*
     - db/schema.rb
     - bin/bundle
     - rubocop/**/*.rb

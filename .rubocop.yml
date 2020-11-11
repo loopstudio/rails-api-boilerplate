@@ -17,54 +17,22 @@ AllCops:
   Exclude:
     - vendor/**/*
     - .circleci/*
+    - db/migrate/*
     - db/schema.rb
     - bin/bundle
     - rubocop/**/*.rb
 
 Layout/LineLength:
   Max: 100
-  AllowURI: true
-  URISchemes:
-    - http
-    - https
   Exclude:
     - config/**/*
 
-Metrics/AbcSize:
-  Max: 15
-  Exclude:
-    - db/migrate/*
-
 Metrics/BlockLength:
-  CountComments: false
-  Max: 25
   Exclude:
     - config/**/*
     - spec/**/*
     - lib/tasks/auto_annotate_models.rake
     - app/admin/**/*
-
-Metrics/BlockNesting:
-  Max: 4
-
-Metrics/ClassLength:
-  CountComments: false
-  Max: 200
-
-Metrics/CyclomaticComplexity:
-  Max: 6
-
-Metrics/MethodLength:
-  CountComments: false
-  Max: 24
-
-Metrics/ModuleLength:
-  CountComments: false
-  Max: 200
-
-Metrics/ParameterLists:
-  Max: 5
-  CountKeywordArgs: true
 
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
@@ -74,3 +42,7 @@ Style/Documentation:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/NumericLiterals:
+  Exclude:
+    - config/initializers/strong_migrations.rb

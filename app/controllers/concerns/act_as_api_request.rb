@@ -3,12 +3,16 @@ module ActAsApiRequest
 
   included do
     before_action :skip_session_storage
-    before_action :check_json_request
+    before_action :check_request_type
   end
 
-  def check_json_request
+  def check_request_type
     return if request_body.empty?
-    return if request.content_type&.match?(/json/)
+
+    allowed_types = %w[json form-data]
+    content_type = request.content_type
+
+    return if content_type.match(Regexp.union(allowed_types))
 
     render json: { error: I18n.t('errors.invalid_content_type') }, status: :bad_request
   end

@@ -20,10 +20,10 @@
 
 ## Main Characteristics
 
-- Language: Ruby 2.7.1+
+- Language: Ruby 2.7.2+
 - Framework: Rails 6.0.3+
 - Webserver: Puma
-- Test Framework: Rspec
+- Test Framework: RSpec
 - Databases: Postgres & Redis
 - Async Processor: Sidekiq
 

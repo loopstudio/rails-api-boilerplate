@@ -43,7 +43,6 @@ describe Rack::Attack, type: :request do
     end
 
     describe 'throttle excessive requests by IP address' do
-
       let(:params) do
         {
           user: {
@@ -63,7 +62,7 @@ describe Rack::Attack, type: :request do
         it do
           limit.times do
             post_request
-  
+
             expect(response).not_to have_http_status(:too_many_requests)
           end
         end
@@ -73,7 +72,7 @@ describe Rack::Attack, type: :request do
         it do
           (limit + 1).times do |req_amount|
             post_request
-  
+
             if req_amount > limit
               expect(response).to have_http_status(:too_many_requests)
               expect(json[:errors]).to include('Throttle limit reached')

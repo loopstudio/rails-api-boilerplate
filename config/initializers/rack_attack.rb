@@ -58,7 +58,7 @@ class Rack::Attack
     if req.path == '/api/v1/users/sign_in' && req.post? && req.params["user"]
       # Normalize the email, using the same logic as your authentication process, to
       # protect against rate limit bypasses. Return the normalized email if present, nil otherwise.
-      req.params['user']['email'].to_s.downcase.gsub(/\s+/, "").presence
+      req.params['user']['email'].downcase.strip.presence
     end
   end
 
@@ -70,9 +70,11 @@ class Rack::Attack
   # If you want to return 503 so that the attacker might be fooled into
   # believing that they've successfully broken your app (or you just want to
   # customize the response), then uncomment these lines.
-  # self.throttled_response = lambda do |env|
-  #  [ 503,  # status
-  #    {},   # headers
-  #    ['']] # body
-  # end
+  self.throttled_response = lambda do |env|
+    [
+      429,
+      {'Content-Type' => 'application/json'},
+      [{errors: ["Throttle limit reached"]}.to_json]
+    ]
+  end
 end

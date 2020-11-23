@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 describe 'GET /api/v1/users/validate_token', type: :request do
   let(:user) { create(:user) }
 

@@ -1,5 +1,5 @@
 describe Rack::Attack, type: :request do
-  describe 'throttle excessive requests by IP address' do
+  describe 'throttle excessive requests by email address' do
     subject(:post_request) do
       post user_session_path, params: params, as: :json
     end

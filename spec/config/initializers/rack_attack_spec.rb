@@ -2,7 +2,7 @@ require "securerandom"
 
 describe Rack::Attack, type: :request do
   subject(:post_request) do
-    post user_session_path, params: params, headers: headers as: :json
+    post user_session_path, params: params, headers: headers, as: :json
   end
 
   let(:limit) { 5 }

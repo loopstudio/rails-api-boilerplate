@@ -1,4 +1,3 @@
-require 'rails_helper'
 require 'addressable/uri'
 
 describe 'GET api/v1/users/password/edit', type: :request do

@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 describe 'POST /api/v1/users/password', type: :request do
   subject(:post_request) do
     post user_password_path, params: params, as: :json

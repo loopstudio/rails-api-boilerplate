@@ -1,5 +1,3 @@
-require 'rails_helper'
-
 describe 'POST /api/v1/users/sign_in', type: :request do
   subject(:post_request) do
     post user_session_path, params: params, as: :json

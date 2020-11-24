@@ -1,4 +1,3 @@
-require 'rails_helper'
 require 'addressable/uri'
 
 describe 'PUT api/v1/users/password/', { type: :request } do

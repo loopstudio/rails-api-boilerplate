@@ -74,7 +74,7 @@ class Rack::Attack
     [
       429,
       {'Content-Type' => 'application/json'},
-      [{errors: ["Throttle limit reached"]}.to_json]
+      [{errors: [I18n.t('errors.network_throttling')]}.to_json]
     ]
   end
 end

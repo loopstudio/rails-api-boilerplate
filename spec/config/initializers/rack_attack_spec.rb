@@ -52,7 +52,7 @@ describe Rack::Attack, type: :request do
         }
       end
 
-      let(:headers) { { REMOTE_ADDR: "1.2.3.4" } }
+      let(:headers) { {REMOTE_ADDR: "1.2.3.4"} }
 
       context 'number of requests is lower than the limit' do
         it do

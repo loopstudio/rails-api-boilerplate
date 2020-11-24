@@ -29,8 +29,8 @@ describe Rack::Attack, type: :request do
       end
     end
 
-    context 'number of requests is higher than the limit' do
-      it do
+    context 'when the number of requests is higher than the limit' do
+      specify do
         (limit + 1).times do |req_amount|
           post_request
 
@@ -54,8 +54,8 @@ describe Rack::Attack, type: :request do
 
       let(:headers) { {REMOTE_ADDR: "1.2.3.4"} }
 
-      context 'number of requests is lower than the limit' do
-        it do
+      context 'when the number of requests is lower than the limit' do
+        specify do
           limit.times do
             post_request
 
@@ -64,8 +64,8 @@ describe Rack::Attack, type: :request do
         end
       end
   
-      context 'number of requests is higher than the limit' do
-        it do
+      context 'when the number of requests is higher than the limit' do
+        specify do
           (limit + 1).times do |req_amount|
             post_request
 

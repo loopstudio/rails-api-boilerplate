@@ -19,8 +19,8 @@ describe Rack::Attack, type: :request do
 
     let(:headers) { {} }
 
-    context 'number of requests is lower than the limit' do
-      it do
+    context 'when the number of requests is lower than the limit' do
+      specify do
         limit.times do
           post_request
 

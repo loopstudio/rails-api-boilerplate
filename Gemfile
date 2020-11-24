@@ -7,8 +7,9 @@ gem 'rails', '~> 6.0.3'
 # WebServer
 gem 'puma', '~> 5.2'
 gem 'rack', '~> 2.2.3'
+gem 'rack-attack', '~> 6.2.2'
 gem 'rack-cors', '~> 1.1.1'
-gem 'rack-attack'
+
 # Database
 gem 'pg', '~> 1.2.3'
 gem 'strong_migrations', '~> 0.7.6'

@@ -330,12 +330,12 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    strong_migrations (0.7.2)
+    strong_migrations (0.7.3)
       activerecord (>= 5)
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tzinfo (1.2.7)
+    tzinfo (1.2.8)
       thread_safe (~> 0.1)
     unicode-display_width (1.7.0)
     uniform_notifier (1.13.0)
@@ -351,7 +351,7 @@ GEM
     xdan-datetimepicker-rails (2.5.4)
       jquery-rails
       rails (>= 3.2.16)
-    zeitwerk (2.4.0)
+    zeitwerk (2.4.1)
 
 PLATFORMS
   ruby
@@ -394,7 +394,7 @@ DEPENDENCIES
   simplecov (~> 0.19.1)
   spring (~> 2.1.1)
   spring-watcher-listen (~> 2.0.0)
-  strong_migrations (~> 0.7.2)
+  strong_migrations (~> 0.7.3)
   tzinfo-data
   webmock (~> 3.10.0)
 

@@ -195,8 +195,6 @@ GEM
     parser (2.7.2.0)
       ast (~> 2.4.1)
     pg (1.2.3)
-    polyamorous (2.3.2)
-      activerecord (>= 5.2.1)
     psych (3.2.0)
     public_suffix (4.0.6)
     puma (5.0.4)
@@ -234,11 +232,10 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
     rake (13.0.1)
-    ransack (2.3.2)
-      activerecord (>= 5.2.1)
-      activesupport (>= 5.2.1)
+    ransack (2.4.0)
+      activerecord (>= 5.2.4)
+      activesupport (>= 5.2.4)
       i18n
-      polyamorous (= 2.3.2)
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -351,7 +348,7 @@ GEM
     xdan-datetimepicker-rails (2.5.4)
       jquery-rails
       rails (>= 3.2.16)
-    zeitwerk (2.4.1)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
@@ -381,7 +378,7 @@ DEPENDENCIES
   rack (~> 2.2.3)
   rack-cors (~> 1.1.1)
   rails (~> 6.0.3)
-  ransack (~> 2.3.2)
+  ransack (~> 2.4.0)
   reek (~> 6.0.2)
   rspec-json_expectations (~> 2.2.0)
   rspec-rails (~> 4.0.1)

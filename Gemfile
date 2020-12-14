@@ -44,7 +44,7 @@ gem 'pagy', '~> 3.10'
 gem 'sentry-raven', '~> 3.1.1'
 
 group :development, :test do
-  gem 'bullet', '~> 6.1.0'
+  gem 'bullet', '~> 6.1.2'
   gem 'byebug', '>= 11.0.1', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 6.1.0'
   gem 'faker', '~> 2.15.1'

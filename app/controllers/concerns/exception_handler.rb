@@ -44,6 +44,8 @@ module ExceptionHandler
     raise exception if Rails.env.test?
 
     logger.error(exception)
+    exception.backtrace.each { |line| logger.error(line) } if Rails.env.development?
+
     Raven.capture_exception(exception)
 
     render_errors(I18n.t('errors.server'), :internal_server_error)

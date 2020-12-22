@@ -20,7 +20,8 @@ detectors:
     enabled: true
     exclude: []
     max_calls: 1
-    allow_calls: []
+    allow_calls:
+      - 'Rails.env'
   FeatureEnvy:
     enabled: true
     exclude:

@@ -41,11 +41,10 @@ module ExceptionHandler
   end
 
   def handle_standard_error(exception)
-    env = Rails.env
-    raise exception if env.test?
+    raise exception if Rails.env.test?
 
     logger.error(exception)
-    exception.backtrace.each { |line| logger.error(line) } if env.development?
+    exception.backtrace.each { |line| logger.error(line) } if Rails.env.development?
 
     Raven.capture_exception(exception)
 

@@ -55,7 +55,7 @@ group :development do
   gem 'annotate', '~> 3.1.1'
   gem 'letter_opener', '~> 1.7.0'
   gem 'listen', '>= 3.0.5', '< 3.5'
-  gem 'reek', '~> 6.0.2', require: false
+  gem 'reek', '~> 6.0.3', require: false
   gem 'rubocop', '~> 1.7.0', require: false
   gem 'rubocop-rails', '~> 2.9.1', require: false
   gem 'rubocop-rspec', '~> 2.1.0', require: false

@@ -11,7 +11,7 @@ gem 'rack-cors', '~> 1.1.1'
 
 # Database
 gem 'pg', '~> 1.2.3'
-gem 'strong_migrations', '~> 0.7.4'
+gem 'strong_migrations', '~> 0.7.5'
 
 # Environment variables
 gem 'dotenv-rails', '~> 2.7.6'
@@ -55,7 +55,7 @@ group :development do
   gem 'annotate', '~> 3.1.1'
   gem 'letter_opener', '~> 1.7.0'
   gem 'listen', '>= 3.0.5', '< 3.5'
-  gem 'reek', '~> 6.0.2', require: false
+  gem 'reek', '~> 6.0.3', require: false
   gem 'rubocop', '~> 1.7.0', require: false
   gem 'rubocop-rails', '~> 2.9.1', require: false
   gem 'rubocop-rspec', '~> 2.1.0', require: false
@@ -65,9 +65,9 @@ end
 
 group :test do
   gem 'rspec-json_expectations', '~> 2.2.0'
-  gem 'shoulda-matchers', '~> 4.4.1'
-  gem 'simplecov', '~> 0.21.1'
-  gem 'webmock', '~> 3.11.0'
+  gem 'shoulda-matchers', '~> 4.5.0'
+  gem 'simplecov', '~> 0.21.2'
+  gem 'webmock', '~> 3.11.1'
 end
 
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]

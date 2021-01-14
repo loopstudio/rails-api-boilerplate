@@ -37,7 +37,7 @@ module ExceptionHandler
   end
 
   def render_page_not_found
-    render_errors(I18n.t("errors.page_not_found"), :bad_request)
+    render_errors(I18n.t('errors.page_not_found'), :bad_request)
   end
 
   def handle_standard_error(exception)

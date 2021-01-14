@@ -6,8 +6,9 @@ task :linters do
     opts.on('-a') { |autofix| options[:autofix] = autofix }
   }.parse!
 
-  files_diff = `git diff --diff-filter=ACMRTUXB --name-only origin/master... | \
-               xargs | sed "s/\\n/\\s/"`
+  sh 'git fetch origin'
+
+  files_diff = `git diff-tree -r --no-commit-id --name-only HEAD origin/master | xargs`
 
   if files_diff.present?
     sh "bundle exec rubocop --force-exclusion #{'-a' if options[:autofix]} #{files_diff}"

@@ -96,7 +96,8 @@ GEM
     chartkick (3.4.2)
     concurrent-ruby (1.1.7)
     connection_pool (2.2.3)
-    crack (0.4.4)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -342,7 +343,7 @@ GEM
     uniform_notifier (1.13.0)
     warden (1.2.9)
       rack (>= 2.0.9)
-    webmock (3.11.0)
+    webmock (3.11.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
@@ -397,7 +398,7 @@ DEPENDENCIES
   spring-watcher-listen (~> 2.0.0)
   strong_migrations (~> 0.7.4)
   tzinfo-data
-  webmock (~> 3.11.0)
+  webmock (~> 3.11.1)
 
 RUBY VERSION
    ruby 2.7.2p137

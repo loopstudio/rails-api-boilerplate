@@ -44,7 +44,7 @@ describe 'PUT api/v1/users/password/', { type: :request } do
     context 'with invalid params' do
       let(:new_password) { nil }
 
-      it { expect(response).to have_http_status(:bad_request) }
+      it { expect(response).to have_http_status(:unprocessable_entity) }
       it { expect(json[:attributes_errors]).not_to have_key('reset_password_token') }
 
       it 'does not change the user password', skip_before: true do

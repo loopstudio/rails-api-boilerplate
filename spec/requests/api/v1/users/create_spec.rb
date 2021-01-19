@@ -1,8 +1,5 @@
-describe 'POST /api/v1/users', type: :request do
-  subject(:post_request) do
-    post api_v1_users_path, params: params, as: :json
-  end
-
+describe 'POST /api/v1/users', { type: :request } do
+  let(:request!) { post api_v1_users_path, params: params, as: :json }
   let(:email) { 'obikenobi@rebel.com' }
   let(:password) { 'abcd1234' }
   let(:params) do
@@ -20,15 +17,9 @@ describe 'POST /api/v1/users', type: :request do
   context 'with correct params given' do
     let(:created_user) { User.last }
 
+    include_examples 'have http status', :ok
+
     specify do
-      post_request
-
-      expect(response).to have_http_status(:ok)
-    end
-
-    it 'returns the user data' do
-      post_request
-
       expect(json[:user]).to include_json(
         id: created_user.id,
         first_name: created_user.first_name,
@@ -39,8 +30,6 @@ describe 'POST /api/v1/users', type: :request do
     end
 
     it 'sets the authentication headers' do
-      post_request
-
       token = response.header['access-token']
       client = response.header['client']
 
@@ -49,36 +38,20 @@ describe 'POST /api/v1/users', type: :request do
   end
 
   context 'with invalid params' do
+    shared_examples 'missing parameter' do |field|
+      let(field) { nil }
+
+      include_examples 'have http status', :unprocessable_entity
+
+      it { expect(json.dig(:attributes_errors, field)).to include("can't be blank") }
+    end
+
     context 'when the email is missing' do
-      let(:email) { nil }
-
-      specify do
-        post_request
-
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
-
-      it 'returns an error message' do
-        post_request
-
-        expect(json.dig(:attributes_errors, :email)).not_to be_nil
-      end
+      include_examples 'missing parameter', :email
     end
 
     context 'when the password is missing' do
-      let(:password) { nil }
-
-      specify do
-        post_request
-
-        expect(response).to have_http_status(:unprocessable_entity)
-      end
-
-      it 'returns an error message' do
-        post_request
-
-        expect(json.dig(:attributes_errors, :password)).not_to be_nil
-      end
+      include_examples 'missing parameter', :password
     end
   end
 end

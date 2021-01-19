@@ -1,36 +1,27 @@
-describe 'DELETE /api/v1/users/sign_out', type: :request do
+describe 'DELETE /api/v1/users/sign_out', { type: :request } do
+  let(:request!) { delete destroy_user_session_path, headers: headers, as: :json }
   let(:user) { create(:user) }
 
   context 'when being signed in' do
-    subject(:delete_request) do
-      delete destroy_user_session_path, headers: auth_headers, as: :json
-    end
+    let(:headers) { auth_headers }
 
-    let(:access_token) { auth_headers['access-token'] }
-    let(:client) { auth_headers['client'] }
+    include_examples 'have http status', :no_content
 
-    specify do
-      delete_request
+    it 'destroys the user token', skip_request: true do
+      access_token = auth_headers['access-token']
+      client = auth_headers['client']
 
-      expect(response).to have_http_status(:success)
-    end
-
-    it 'destroys the user token' do
       expect {
-        delete_request
+        request!
       }.to change { user.reload.valid_token?(access_token, client) }.from(true).to(false)
     end
   end
 
   context 'when not being signed in' do
-    subject(:not_signed_in_request) do
-      delete destroy_user_session_path, as: :json
-    end
+    let(:headers) { nil }
 
-    specify do
-      not_signed_in_request
-
-      expect(response).to have_http_status(:unauthorized)
-    end
+    include_examples 'have http status with error',
+                     :unauthorized,
+                     I18n.t('devise.failure.unauthenticated')
   end
 end

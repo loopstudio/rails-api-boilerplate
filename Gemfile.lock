@@ -235,7 +235,7 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
     rake (13.0.3)
-    ransack (2.4.1)
+    ransack (2.4.2)
       activerecord (>= 5.2.4)
       activesupport (>= 5.2.4)
       i18n
@@ -383,7 +383,7 @@ DEPENDENCIES
   rack (~> 2.2.3)
   rack-cors (~> 1.1.1)
   rails (~> 6.0.3)
-  ransack (~> 2.4.1)
+  ransack (~> 2.4.2)
   reek (~> 6.0.3)
   rspec-json_expectations (~> 2.2.0)
   rspec-rails (~> 4.0.2)

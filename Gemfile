@@ -27,7 +27,7 @@ gem 'activeadmin', '~> 2.8.1'
 gem 'activeadmin_addons', '~> 1.7.1'
 gem 'active_admin_theme', '~> 1.1'
 gem 'chartkick', '~> 3.4.2'
-gem 'groupdate', '~> 5.2.1'
+gem 'groupdate', '~> 5.2.2'
 gem 'ransack', '~> 2.4.2'
 
 # Authentication

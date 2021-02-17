@@ -1,8 +1,7 @@
 require 'addressable/uri'
 
 describe 'PUT api/v1/users/password/', { type: :request } do
-  subject(:put_request) { put user_password_path, params: params, headers: headers, as: :json }
-
+  let(:request!) { put user_password_path, params: params, headers: headers, as: :json }
   let(:user) { create(:user) }
   let!(:password_token) { user.send(:set_reset_password_token) }
   let(:new_password) { '123456789aA?!' }
@@ -13,17 +12,14 @@ describe 'PUT api/v1/users/password/', { type: :request } do
     }
   end
 
-  before { |example| put_request unless example.metadata[:skip_before] }
-
   context 'with a valid token' do
     context 'with valid params' do
-      it 'updates the user password', skip_before: true do
-        expect {
-          put_request
-        }.to(change { user.reload.encrypted_password })
+      it 'updates the user password', skip_request: true do
+        expect { request! }.to(change { user.reload.encrypted_password })
       end
 
-      it { expect(response).to be_successful }
+      include_examples 'have http status', :ok
+
       it { expect(user.reload).to be_valid_password(new_password) }
 
       it 'returns the user data' do
@@ -44,11 +40,12 @@ describe 'PUT api/v1/users/password/', { type: :request } do
     context 'with invalid params' do
       let(:new_password) { nil }
 
-      it { expect(response).to have_http_status(:bad_request) }
+      include_examples 'have http status', :unprocessable_entity
+
       it { expect(json[:attributes_errors]).not_to have_key('reset_password_token') }
 
-      it 'does not change the user password', skip_before: true do
-        expect { put_request }.not_to change(user.reload, :encrypted_password)
+      it 'does not change the user password', skip_request: true do
+        expect { request! }.not_to change(user.reload, :encrypted_password)
       end
     end
   end
@@ -56,11 +53,12 @@ describe 'PUT api/v1/users/password/', { type: :request } do
   context 'with an invalid token' do
     let(:password_token) { 'invalid token' }
 
-    it { expect(response).to have_http_status(:bad_request) }
+    include_examples 'have http status', :bad_request
+
     it { expect(user.reload).not_to be_valid_password(new_password) }
 
-    it 'does not change the user password', skip_before: true do
-      expect { put_request }.not_to change(user.reload, :encrypted_password)
+    it 'does not change the user password', skip_request: true do
+      expect { request! }.not_to change(user.reload, :encrypted_password)
     end
   end
 end

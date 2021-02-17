@@ -17,6 +17,8 @@ end
 
 RSpec.configure do |config|
   config.include RequestHelpers, type: :request
+  config.include_context 'request initializer', type: :request
+
   config.include Rails.application.routes.url_helpers
 
   config.use_transactional_fixtures = true

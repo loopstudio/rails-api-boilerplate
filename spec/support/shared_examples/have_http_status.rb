@@ -5,7 +5,7 @@ shared_examples 'have http status' do |status, skip_request: false|
 end
 
 shared_examples 'have http status with error' do |status, error, skip_request: false|
-  include_examples 'have http status', status, error, skip_request: skip_request
+  include_examples 'have http status', status, skip_request: skip_request
 
   specify '', skip_request: skip_request do
     expect(json[:errors]).to include(error)

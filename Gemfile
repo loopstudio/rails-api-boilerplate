@@ -38,7 +38,7 @@ gem 'devise_token_auth', '~> 1.1.5'
 gem 'jb', '~> 0.8.0'
 
 # Pagination
-gem 'pagy', '~> 3.10'
+gem 'pagy', '~> 3.11'
 
 # Monitoring errors
 gem 'sentry-raven', '~> 3.1.1'
@@ -56,7 +56,7 @@ group :development do
   gem 'letter_opener', '~> 1.7.0'
   gem 'listen', '>= 3.0.5', '< 3.5'
   gem 'reek', '~> 6.0.3', require: false
-  gem 'rubocop', '~> 1.9.1', require: false
+  gem 'rubocop', '~> 1.10.0', require: false
   gem 'rubocop-rails', '~> 2.9.1', require: false
   gem 'rubocop-rspec', '~> 2.2.0', require: false
   gem 'spring', '~> 2.1.1'

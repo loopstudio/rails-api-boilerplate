@@ -39,7 +39,7 @@ jobs:
         key: ${{ runner.os }}-new-gems-${{ hashFiles('**/Gemfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-new-gems-
-          ${{ runner.os }}-
+          ${{ runner.os }}-new
 
     - name: Build App
       env:

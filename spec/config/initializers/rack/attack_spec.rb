@@ -1,7 +1,7 @@
 require 'securerandom'
 
 describe Rack::Attack, type: :request do
-  subject(:post_request) do
+  subject(:request!) do
     post user_session_path, params: params, headers: headers, as: :json
   end
 
@@ -22,7 +22,7 @@ describe Rack::Attack, type: :request do
     context 'when the number of requests is lower than the limit' do
       specify do
         limit.times do
-          post_request
+          request!
 
           expect(response).not_to have_http_status(:too_many_requests)
         end
@@ -31,13 +31,14 @@ describe Rack::Attack, type: :request do
 
     context 'when the number of requests is higher than the limit' do
       specify do
-        (limit + 1).times do |req_amount|
-          post_request
+        exceed_limit_requests do
+          expect(response).to have_http_status(:too_many_requests)
+        end
+      end
 
-          if req_amount > limit
-            expect(response).to have_http_status(:too_many_requests)
-            expect(json[:errors]).to include('Throttle limit reached')
-          end
+      specify do
+        exceed_limit_requests do
+          expect(json[:errors]).to include('Throttle limit reached')
         end
       end
     end
@@ -57,7 +58,7 @@ describe Rack::Attack, type: :request do
       context 'when the number of requests is lower than the limit' do
         specify do
           limit.times do
-            post_request
+            request!
 
             expect(response).not_to have_http_status(:too_many_requests)
           end
@@ -66,15 +67,24 @@ describe Rack::Attack, type: :request do
 
       context 'when the number of requests is higher than the limit' do
         specify do
-          (limit + 1).times do |req_amount|
-            post_request
-
-            if req_amount > limit
-              expect(response).to have_http_status(:too_many_requests)
-              expect(json[:errors]).to include('Throttle limit reached')
-            end
+          exceed_limit_requests do
+            expect(response).to have_http_status(:too_many_requests)
           end
         end
+
+        specify do
+          exceed_limit_requests do
+            expect(json[:errors]).to include('Throttle limit reached')
+          end
+        end
+      end
+    end
+
+    def exceed_limit_requests
+      (limit + 1).times do |req_amount|
+        request!
+
+        yield if req_amount > limit
       end
     end
   end

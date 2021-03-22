@@ -1,4 +1,4 @@
-require "securerandom"
+require 'securerandom'
 
 describe Rack::Attack, type: :request do
   subject(:post_request) do
@@ -52,7 +52,7 @@ describe Rack::Attack, type: :request do
         }
       end
 
-      let(:headers) { {REMOTE_ADDR: "1.2.3.4"} }
+      let(:headers) { { REMOTE_ADDR: '1.2.3.4' } }
 
       context 'when the number of requests is lower than the limit' do
         specify do
@@ -63,7 +63,7 @@ describe Rack::Attack, type: :request do
           end
         end
       end
-  
+
       context 'when the number of requests is higher than the limit' do
         specify do
           (limit + 1).times do |req_amount|

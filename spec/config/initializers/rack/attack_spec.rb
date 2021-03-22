@@ -21,9 +21,7 @@ describe Rack::Attack, type: :request do
 
     context 'when the number of requests is lower than the limit' do
       specify do
-        limit.times do
-          request!
-
+        within_limit_request do
           expect(response).not_to have_http_status(:too_many_requests)
         end
       end
@@ -31,13 +29,13 @@ describe Rack::Attack, type: :request do
 
     context 'when the number of requests is higher than the limit' do
       specify do
-        exceed_limit_requests do
+        exceed_limit_request do
           expect(response).to have_http_status(:too_many_requests)
         end
       end
 
       specify do
-        exceed_limit_requests do
+        exceed_limit_request do
           expect(json[:errors]).to include('Throttle limit reached')
         end
       end
@@ -57,9 +55,7 @@ describe Rack::Attack, type: :request do
 
       context 'when the number of requests is lower than the limit' do
         specify do
-          limit.times do
-            request!
-
+          within_limit_request do
             expect(response).not_to have_http_status(:too_many_requests)
           end
         end
@@ -67,24 +63,32 @@ describe Rack::Attack, type: :request do
 
       context 'when the number of requests is higher than the limit' do
         specify do
-          exceed_limit_requests do
+          exceed_limit_request do
             expect(response).to have_http_status(:too_many_requests)
           end
         end
 
         specify do
-          exceed_limit_requests do
+          exceed_limit_request do
             expect(json[:errors]).to include('Throttle limit reached')
           end
         end
       end
     end
 
-    def exceed_limit_requests
+    def exceed_limit_request
       (limit + 1).times do |req_amount|
         request!
 
         yield if req_amount > limit
+      end
+    end
+
+    def within_limit_request
+      limit.times do
+        request!
+
+        yield
       end
     end
   end

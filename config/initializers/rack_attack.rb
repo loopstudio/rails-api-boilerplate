@@ -54,7 +54,7 @@ module Rack
       if req.path == '/api/v1/users/sign_in' && req.post? && req.params['user']
         # Normalize the email, using the same logic as your authentication process, to
         # protect against rate limit bypasses. Return the normalized email if present, nil otherwise.
-        req.params['user']['email'].downcase.strip.presence
+        req.params['user'].try(:[], "email")&.downcase&.strip.presence
       end
     end
 

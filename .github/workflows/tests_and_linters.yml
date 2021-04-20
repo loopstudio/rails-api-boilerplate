@@ -24,22 +24,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Set up Ruby 2.7.2
-      uses: actions/setup-ruby@v1
+    - name: Set up Ruby (.ruby-version)
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7.2
+        bundler-cache: true
 
     - name: Install PostgreSQL 11 client
       run: |
         sudo apt-get -yqq install libpq-dev
-
-    - uses: actions/cache@v1
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-new-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-new-gems-
-          ${{ runner.os }}-new
 
     - name: Build App
       env:

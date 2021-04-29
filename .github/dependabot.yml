@@ -1,0 +1,24 @@
+version: 2
+updates:
+- package-ecosystem: bundler
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: rubocop
+    versions:
+    - 1.11.0
+    - 1.9.0
+  - dependency-name: rspec-rails
+    versions:
+    - 4.1.0
+    - 5.0.0
+  - dependency-name: webmock
+    versions:
+    - 3.11.3
+    - 3.12.0
+  - dependency-name: bootsnap
+    versions:
+    - 1.6.0

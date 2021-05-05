@@ -36,7 +36,8 @@ module RailsApiBoilerplate
 
     config.action_mailer.default_url_options = { host: ENV['SERVER_URL'] }
     config.action_mailer.default_options = {
-      from: ENV['DEFAULT_FROM_EMAIL_ADDRESS']
+      from: ENV.fetch('DEFAULT_FROM_EMAIL_ADDRESS'),
+      reply_to: ENV.fetch('DEFAULT_FROM_EMAIL_ADDRESS')
     }
 
     config.generators do |gen|

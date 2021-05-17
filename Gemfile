@@ -42,7 +42,8 @@ gem 'jb', '~> 0.8.0'
 gem 'pagy', '~> 3.13'
 
 # Monitoring errors
-gem 'sentry-raven', '~> 3.1.2'
+gem 'sentry-rails'
+gem 'sentry-ruby'
 
 group :development, :test do
   gem 'bullet', '~> 6.1.4'

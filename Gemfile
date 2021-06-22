@@ -44,6 +44,7 @@ gem 'pagy', '~> 3.13'
 # Monitoring errors
 gem 'sentry-rails'
 gem 'sentry-ruby'
+gem 'sentry-sidekiq'
 
 group :development, :test do
   gem 'bullet', '~> 6.1.4'

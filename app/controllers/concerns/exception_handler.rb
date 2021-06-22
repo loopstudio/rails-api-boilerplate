@@ -67,6 +67,6 @@ module ExceptionHandler
     Sentry.set_extras(params: params.to_unsafe_h, url: request.url)
     return if current_user.nil?
 
-    Sentry.set_context('context', id: current_user.id, email: current_user.email)
+    Sentry.set_context('context', { id: current_user.id, email: current_user.email })
   end
 end

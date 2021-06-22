@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.7.2'
 
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'rails', '~> 6.0.3'
+gem 'rails', '~> 6.0.4'
 
 # WebServer
 gem 'puma', '~> 5.3'
@@ -12,7 +12,7 @@ gem 'rack-cors', '~> 1.1.1'
 
 # Database
 gem 'pg', '~> 1.2.3'
-gem 'strong_migrations', '~> 0.7.6'
+gem 'strong_migrations', '~> 0.7.7'
 
 # Environment variables
 gem 'dotenv-rails', '~> 2.7.6'
@@ -39,7 +39,7 @@ gem 'devise_token_auth', '~> 1.1.5'
 gem 'jb', '~> 0.8.0'
 
 # Pagination
-gem 'pagy', '~> 3.13'
+gem 'pagy', '~> 4.9'
 
 # Monitoring errors
 gem 'sentry-rails'
@@ -59,9 +59,9 @@ group :development do
   gem 'letter_opener', '~> 1.7.0'
   gem 'listen', '>= 3.0.5', '< 3.6'
   gem 'reek', '~> 6.0.4', require: false
-  gem 'rubocop', '~> 1.15.0', require: false
+  gem 'rubocop', '~> 1.17.0', require: false
   gem 'rubocop-rails', '~> 2.10.1', require: false
-  gem 'rubocop-rspec', '~> 2.3.0', require: false
+  gem 'rubocop-rspec', '~> 2.4.0', require: false
   gem 'spring', '~> 2.1.1'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end

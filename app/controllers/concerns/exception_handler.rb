@@ -9,7 +9,7 @@ module ExceptionHandler
     rescue_from ActiveRecord::RecordInvalid, with: :render_record_invalid
     rescue_from Pagy::OverflowError, with: :render_page_overflow
 
-    before_action :set_raven_context
+    before_action :set_sentry_context
   end
 
   private
@@ -48,7 +48,7 @@ module ExceptionHandler
     logger.error(exception)
     exception.backtrace.each { |line| logger.error(line) } if Rails.env.development?
 
-    Raven.capture_exception(exception)
+    Sentry.capture_exception(exception)
 
     render_errors(I18n.t('errors.server'), :internal_server_error)
   end
@@ -63,10 +63,10 @@ module ExceptionHandler
     end
   end
 
-  def set_raven_context
-    Raven.extra_context(params: params.to_unsafe_h, url: request.url)
+  def set_sentry_context
+    Sentry.set_extras(params: params.to_unsafe_h, url: request.url)
     return if current_user.nil?
 
-    Raven.user_context(id: current_user.id, email: current_user.email)
+    Sentry.set_context('context', { id: current_user.id, email: current_user.email })
   end
 end

@@ -42,7 +42,9 @@ gem 'jb', '~> 0.8.0'
 gem 'pagy', '~> 4.9'
 
 # Monitoring errors
-gem 'sentry-raven', '~> 3.1.2'
+gem 'sentry-rails'
+gem 'sentry-ruby'
+gem 'sentry-sidekiq'
 
 group :development, :test do
   gem 'bullet', '~> 6.1.4'

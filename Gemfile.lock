@@ -192,7 +192,7 @@ GEM
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    pagy (4.9.0)
+    pagy (4.10.0)
     parallel (1.20.1)
     parser (3.0.1.1)
       ast (~> 2.4.1)
@@ -389,7 +389,7 @@ DEPENDENCIES
   letter_opener (~> 1.7.0)
   listen (>= 3.0.5, < 3.6)
   nilify_blanks (~> 1.4)
-  pagy (~> 4.9)
+  pagy (~> 4.10)
   pg (~> 1.2.3)
   puma (~> 5.3)
   rack (~> 2.2.3)
@@ -402,11 +402,10 @@ DEPENDENCIES
   rspec-rails (~> 5.0.1)
   rubocop (~> 1.17.0)
   rubocop-rails (~> 2.10.1)
-  rubocop-rspec (~> 2.3.0)
+  rubocop-rspec (~> 2.4.0)
   sentry-rails
   sentry-ruby
   sentry-sidekiq
-  rubocop-rspec (~> 2.4.0)
   shoulda-matchers (~> 4.5.1)
   sidekiq (~> 6.2.1)
   simplecov (~> 0.21.2)

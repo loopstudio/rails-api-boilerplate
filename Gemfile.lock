@@ -38,7 +38,7 @@ GEM
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
     active_admin_theme (1.1.4)
-    active_material (1.4.2)
+    active_material (1.5.2)
     activeadmin (2.8.1)
       arbre (~> 1.2, >= 1.2.1)
       formtastic (>= 3.1, < 5.0)
@@ -50,12 +50,12 @@ GEM
       ransack (~> 2.1, >= 2.1.1)
       sassc-rails (~> 2.1)
       sprockets (>= 3.0, < 4.1)
-    activeadmin_addons (1.7.1)
+    activeadmin_addons (1.8.0)
       active_material
       railties
-      require_all (~> 1.5)
-      sass
-      select2-rails (~> 4.0)
+      require_all
+      sassc
+      sassc-rails
       xdan-datetimepicker-rails (~> 2.5.1)
     activejob (6.0.4)
       activesupport (= 6.0.4)
@@ -136,7 +136,7 @@ GEM
     faraday-excon (1.1.0)
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.1.0)
-    ffi (1.15.0)
+    ffi (1.15.3)
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
@@ -249,7 +249,7 @@ GEM
       activerecord (>= 5.2.4)
       activesupport (>= 5.2.4)
       i18n
-    rb-fsevent (0.10.4)
+    rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.2.5)
@@ -259,7 +259,7 @@ GEM
       psych (~> 3.1)
       rainbow (>= 2.0, < 4.0)
     regexp_parser (2.1.1)
-    require_all (1.5.0)
+    require_all (3.0.0)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -302,11 +302,6 @@ GEM
       rubocop-ast (>= 1.1.0)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.4)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -315,8 +310,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    select2-rails (4.0.3)
-      thor (~> 0.14)
     sentry-rails (4.5.2)
       railties (>= 5.0)
       sentry-ruby-core (~> 4.5.0)
@@ -354,7 +347,7 @@ GEM
       sprockets (>= 3.0.0)
     strong_migrations (0.7.7)
       activerecord (>= 5)
-    thor (0.20.3)
+    thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
     tzinfo (1.2.9)
@@ -381,7 +374,7 @@ PLATFORMS
 DEPENDENCIES
   active_admin_theme (~> 1.1)
   activeadmin (~> 2.8.1)
-  activeadmin_addons (~> 1.7.1)
+  activeadmin_addons (~> 1.8.0)
   annotate (~> 3.1.1)
   bootsnap (>= 1.4.2)
   bullet (~> 6.1.4)

@@ -33,7 +33,7 @@ gem 'ransack', '~> 2.4.2'
 
 # Authentication
 gem 'devise', '~> 4.8.0'
-gem 'devise_token_auth', '~> 1.1.5'
+gem 'devise_token_auth', '~> 1.2.0'
 
 # Serializing json views
 gem 'jb', '~> 0.8.0'

@@ -50,7 +50,7 @@ GEM
       ransack (~> 2.1, >= 2.1.1)
       sassc-rails (~> 2.1)
       sprockets (>= 3.0, < 4.1)
-    activeadmin_addons (1.8.2)
+    activeadmin_addons (1.8.3)
       active_material
       railties
       require_all
@@ -144,8 +144,8 @@ GEM
     formtastic (3.1.5)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.6.0)
-    globalid (0.4.2)
-      activesupport (>= 4.2.0)
+    globalid (0.5.1)
+      activesupport (>= 5.0)
     groupdate (5.2.2)
       activesupport (>= 5)
     has_scope (0.7.2)
@@ -379,7 +379,7 @@ PLATFORMS
 DEPENDENCIES
   active_admin_theme (~> 1.1)
   activeadmin (~> 2.8.1)
-  activeadmin_addons (~> 1.8.2)
+  activeadmin_addons (~> 1.8.3)
   annotate (~> 3.1.1)
   bootsnap (>= 1.4.2)
   bullet (~> 6.1.4)

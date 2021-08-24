@@ -329,7 +329,7 @@ GEM
       sidekiq (>= 3.0)
     shoulda-matchers (5.0.0)
       activesupport (>= 5.2.0)
-    sidekiq (6.2.1)
+    sidekiq (6.2.2)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
@@ -413,7 +413,7 @@ DEPENDENCIES
   sentry-ruby
   sentry-sidekiq
   shoulda-matchers (~> 5.0.0)
-  sidekiq (~> 6.2.1)
+  sidekiq (~> 6.2.2)
   simplecov (~> 0.21.2)
   spring (~> 2.1.1)
   spring-watcher-listen (~> 2.0.0)

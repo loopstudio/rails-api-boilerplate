@@ -301,9 +301,8 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
-    rubocop-rspec (2.4.0)
-      rubocop (~> 1.0)
-      rubocop-ast (>= 1.1.0)
+    rubocop-rspec (2.5.0)
+      rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     sassc (2.4.0)
@@ -357,7 +356,7 @@ GEM
     tilt (2.0.10)
     tzinfo (1.2.9)
       thread_safe (~> 0.1)
-    unicode-display_width (2.0.0)
+    unicode-display_width (2.1.0)
     uniform_notifier (1.14.2)
     warden (1.2.9)
       rack (>= 2.0.9)
@@ -408,7 +407,7 @@ DEPENDENCIES
   rspec-rails (~> 5.0.2)
   rubocop (~> 1.21.0)
   rubocop-rails (~> 2.12.2)
-  rubocop-rspec (~> 2.4.0)
+  rubocop-rspec (~> 2.5.0)
   sentry-rails
   sentry-ruby
   sentry-sidekiq

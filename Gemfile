@@ -60,7 +60,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.8'
   gem 'reek', '~> 6.0.6', require: false
   gem 'rubocop', '~> 1.22.1', require: false
-  gem 'rubocop-rails', '~> 2.12.3', require: false
+  gem 'rubocop-rails', '~> 2.12.4', require: false
   gem 'rubocop-rspec', '~> 2.5.0', require: false
   gem 'spring', '~> 2.1.1'
   gem 'spring-watcher-listen', '~> 2.0.0'

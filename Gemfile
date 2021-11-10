@@ -39,7 +39,7 @@ gem 'devise_token_auth', '~> 1.2.0'
 gem 'jb', '~> 0.8.0'
 
 # Pagination
-gem 'pagy', '~> 5.1'
+gem 'pagy', '~> 5.2'
 
 # Monitoring errors
 gem 'sentry-rails'

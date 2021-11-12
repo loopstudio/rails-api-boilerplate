@@ -154,7 +154,7 @@ GEM
       actionpack (>= 4.1)
       activesupport (>= 4.1)
     hashdiff (1.0.1)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     inherited_resources (1.11.0)
       actionpack (>= 5.0, < 6.1)
@@ -214,7 +214,7 @@ GEM
     public_suffix (4.0.6)
     puma (5.5.2)
       nio4r (~> 2.0)
-    racc (1.5.2)
+    racc (1.6.0)
     rack (2.2.3)
     rack-attack (6.5.0)
       rack (>= 1.0, < 3)
@@ -313,18 +313,18 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    sentry-rails (4.7.3)
+    sentry-rails (4.8.0)
       railties (>= 5.0)
-      sentry-ruby-core (~> 4.7.0)
-    sentry-ruby (4.7.3)
+      sentry-ruby-core (~> 4.8.0)
+    sentry-ruby (4.8.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       faraday (>= 1.0)
-      sentry-ruby-core (= 4.7.3)
-    sentry-ruby-core (4.7.3)
+      sentry-ruby-core (= 4.8.0)
+    sentry-ruby-core (4.8.0)
       concurrent-ruby
       faraday
-    sentry-sidekiq (4.7.3)
-      sentry-ruby-core (~> 4.7.0)
+    sentry-sidekiq (4.8.0)
+      sentry-ruby-core (~> 4.8.0)
       sidekiq (>= 3.0)
     shoulda-matchers (5.0.0)
       activesupport (>= 5.2.0)
@@ -370,7 +370,7 @@ GEM
     xdan-datetimepicker-rails (2.5.4)
       jquery-rails
       rails (>= 3.2.16)
-    zeitwerk (2.4.2)
+    zeitwerk (2.5.1)
 
 PLATFORMS
   ruby

@@ -32,7 +32,7 @@ gem 'groupdate', '~> 5.2.4'
 gem 'ransack', '~> 2.4.2'
 
 # Authentication
-gem 'devise', '~> 4.8.0'
+gem 'devise', '~> 4.8.1'
 gem 'devise_token_auth', '~> 1.2.0'
 
 # Serializing json views

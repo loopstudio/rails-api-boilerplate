@@ -301,7 +301,7 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
-    rubocop-rspec (2.6.0)
+    rubocop-rspec (2.7.0)
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
@@ -407,7 +407,7 @@ DEPENDENCIES
   rspec-rails (~> 5.0.2)
   rubocop (~> 1.24.0)
   rubocop-rails (~> 2.13.0)
-  rubocop-rspec (~> 2.6.0)
+  rubocop-rspec (~> 2.7.0)
   sentry-rails
   sentry-ruby
   sentry-sidekiq

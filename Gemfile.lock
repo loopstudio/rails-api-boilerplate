@@ -250,7 +250,7 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rainbow (3.0.0)
     rake (13.0.6)
-    ransack (2.4.2)
+    ransack (2.5.0)
       activerecord (>= 5.2.4)
       activesupport (>= 5.2.4)
       i18n
@@ -370,7 +370,7 @@ GEM
     xdan-datetimepicker-rails (2.5.4)
       jquery-rails
       rails (>= 3.2.16)
-    zeitwerk (2.5.1)
+    zeitwerk (2.5.2)
 
 PLATFORMS
   ruby
@@ -401,7 +401,7 @@ DEPENDENCIES
   rack-attack (~> 6.5.0)
   rack-cors (~> 1.1.1)
   rails (~> 6.0.4)
-  ransack (~> 2.4.2)
+  ransack (~> 2.5.0)
   reek (~> 6.0.6)
   rspec-json_expectations (~> 2.2.0)
   rspec-rails (~> 5.0.2)

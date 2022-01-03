@@ -59,7 +59,7 @@ group :development do
   gem 'letter_opener', '~> 1.7.0'
   gem 'listen', '>= 3.0.5', '< 3.8'
   gem 'reek', '~> 6.0.6', require: false
-  gem 'rubocop', '~> 1.24.0', require: false
+  gem 'rubocop', '~> 1.24.1', require: false
   gem 'rubocop-rails', '~> 2.13.0', require: false
   gem 'rubocop-rspec', '~> 2.7.0', require: false
   gem 'spring', '~> 2.1.1'

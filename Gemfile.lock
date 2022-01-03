@@ -206,7 +206,7 @@ GEM
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    pagy (5.6.7)
+    pagy (5.6.9)
     parallel (1.21.0)
     parser (3.0.3.2)
       ast (~> 2.4.1)

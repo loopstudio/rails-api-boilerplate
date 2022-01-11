@@ -86,7 +86,7 @@ GEM
       ruby2_keywords (>= 0.0.2, < 1.0)
     ast (2.4.2)
     bcrypt (3.1.16)
-    bootsnap (1.9.3)
+    bootsnap (1.9.4)
       msgpack (~> 1.0)
     builder (3.2.4)
     bullet (7.0.0)

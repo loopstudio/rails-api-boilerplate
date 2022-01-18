@@ -206,7 +206,7 @@ GEM
       activerecord (>= 4.0.0)
       activesupport (>= 4.0.0)
     nio4r (2.5.8)
-    nokogiri (1.13.0)
+    nokogiri (1.13.1)
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
@@ -317,9 +317,9 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    sentry-rails (4.9.0)
+    sentry-rails (4.9.1)
       railties (>= 5.0)
-      sentry-ruby-core (~> 4.9.0)
+      sentry-ruby-core (~> 4.9.1)
     sentry-ruby (4.9.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       faraday (~> 1.0)

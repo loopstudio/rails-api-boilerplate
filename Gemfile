@@ -5,7 +5,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rails', '~> 6.0.4'
 
 # WebServer
-gem 'puma', '~> 5.5'
+gem 'puma', '~> 5.6'
 gem 'rack', '~> 2.2.3'
 gem 'rack-attack', '~> 6.5.0'
 gem 'rack-cors', '~> 1.1.1'

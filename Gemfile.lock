@@ -135,7 +135,7 @@ GEM
       actionpack (>= 4.1)
       activesupport (>= 4.1)
     hashdiff (1.0.1)
-    i18n (1.9.0)
+    i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     inherited_resources (1.11.0)
       actionpack (>= 5.0, < 6.1)
@@ -186,7 +186,7 @@ GEM
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    pagy (5.9.1)
+    pagy (5.9.2)
       activesupport
     parallel (1.21.0)
     parser (3.1.0.0)
@@ -349,7 +349,7 @@ GEM
     xdan-datetimepicker-rails (2.5.4)
       jquery-rails
       rails (>= 3.2.16)
-    zeitwerk (2.5.3)
+    zeitwerk (2.5.4)
 
 PLATFORMS
   ruby

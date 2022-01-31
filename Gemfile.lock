@@ -186,7 +186,7 @@ GEM
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    pagy (5.9.2)
+    pagy (5.9.3)
       activesupport
     parallel (1.21.0)
     parser (3.1.0.0)

@@ -238,7 +238,7 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redis (4.5.1)
+    redis (4.6.0)
     reek (6.1.0)
       kwalify (~> 0.7.0)
       parser (~> 3.1.0)
@@ -307,7 +307,7 @@ GEM
       sidekiq (>= 3.0)
     shoulda-matchers (5.1.0)
       activesupport (>= 5.2.0)
-    sidekiq (6.4.0)
+    sidekiq (6.4.1)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
@@ -391,7 +391,7 @@ DEPENDENCIES
   sentry-ruby
   sentry-sidekiq
   shoulda-matchers (~> 5.1.0)
-  sidekiq (~> 6.4.0)
+  sidekiq (~> 6.4.1)
   simplecov (~> 0.21.2)
   spring (~> 2.1.1)
   spring-watcher-listen (~> 2.0.0)

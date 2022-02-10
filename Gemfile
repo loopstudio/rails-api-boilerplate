@@ -12,7 +12,7 @@ gem 'rack-cors', '~> 1.1.1'
 
 # Database
 gem 'pg', '~> 1.3.1'
-gem 'strong_migrations', '~> 0.7.9'
+gem 'strong_migrations', '~> 0.8.0'
 
 # Environment variables
 gem 'dotenv-rails', '~> 2.7.6'

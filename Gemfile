@@ -50,7 +50,7 @@ group :development, :test do
   gem 'bullet', '~> 7.0.1'
   gem 'byebug', '>= 11.0.1', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 6.2.0'
-  gem 'faker', '~> 2.19.0'
+  gem 'faker', '~> 2.20.0'
   gem 'rspec-rails', '~> 5.1.0'
 end
 

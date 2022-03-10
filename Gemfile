@@ -29,7 +29,7 @@ gem 'activeadmin_addons', '~> 1.9.0'
 gem 'active_admin_theme', '~> 1.1'
 gem 'chartkick', '~> 4.1.3'
 gem 'groupdate', '~> 6.0.1'
-gem 'ransack', '~> 2.5.0'
+gem 'ransack', '~> 2.6.0'
 
 # Authentication
 gem 'devise', '~> 4.8.1'

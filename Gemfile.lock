@@ -280,7 +280,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.16.0)
       parser (>= 3.1.1.0)
-    rubocop-rails (2.14.1)
+    rubocop-rails (2.14.2)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
@@ -386,7 +386,7 @@ DEPENDENCIES
   rspec-json_expectations (~> 2.2.0)
   rspec-rails (~> 5.1.1)
   rubocop (~> 1.26.0)
-  rubocop-rails (~> 2.14.1)
+  rubocop-rails (~> 2.14.2)
   rubocop-rspec (~> 2.9.0)
   sentry-rails
   sentry-ruby

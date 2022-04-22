@@ -55,7 +55,7 @@ The [nilify_blanks](https://github.com/rubiety/nilify_blanks) line on `Applicati
 
 ## Getting Started
 
-1.  Make sure that you have Rails 6, PostgreSQL, git cli, and bundle installed.
+1.  Make sure that you have Rails 6, PostgreSQL, Redis, git cli, and bundle installed.
 2.  Clone this repo using `git clone --depth=1 https://github.com/LoopStudio/rails-api-boilerplate.git <YOUR_PROJECT_NAME>`
 3.  Update the values of the `.env.template` file to match your app
 4.  Create your `.env` file. You have an example at `.env.template`. You should be able to copy it and set your values.

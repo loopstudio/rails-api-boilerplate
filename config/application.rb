@@ -27,17 +27,17 @@ module RailsApiBoilerplate
     ActionMailer::Base.smtp_settings = {
       address: 'smtp.sendgrid.net',
       port: 25,
-      domain: ENV['MAILER_DOMAIN'],
+      domain: ENV.fetch('MAILER_DOMAIN', nil),
       authentication: :plain,
       user_name: 'apikey',
-      password: ENV['SENDGRID_API_KEY'],
+      password: ENV.fetch('SENDGRID_API_KEY', nil),
       enable_starttls_auto: true
     }
 
-    config.action_mailer.default_url_options = { host: ENV['SERVER_URL'] }
+    config.action_mailer.default_url_options = { host: ENV.fetch('SERVER_URL', nil) }
     config.action_mailer.default_options = {
-      from: ENV.fetch('DEFAULT_FROM_EMAIL_ADDRESS'),
-      reply_to: ENV.fetch('DEFAULT_FROM_EMAIL_ADDRESS')
+      from: ENV.fetch('DEFAULT_FROM_EMAIL_ADDRESS', nil),
+      reply_to: ENV.fetch('DEFAULT_FROM_EMAIL_ADDRESS', nil)
     }
 
     config.generators do |gen|

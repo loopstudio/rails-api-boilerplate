@@ -23,7 +23,7 @@ describe 'POST /api/v1/users/password', { type: :request } do
       include_examples 'have http status', :not_found
 
       it 'does not send an email', skip_request: true do
-        expect { request! }.to change { ActionMailer::Base.deliveries.count }.by(0)
+        expect { request! }.not_to(change { ActionMailer::Base.deliveries.count })
       end
     end
   end

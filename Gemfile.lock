@@ -330,7 +330,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    strong_migrations (1.0.0)
+    strong_migrations (1.1.0)
       activerecord (>= 5.2)
     thor (1.2.1)
     tilt (2.0.10)
@@ -396,7 +396,7 @@ DEPENDENCIES
   simplecov (~> 0.21.2)
   spring (~> 2.1.1)
   spring-watcher-listen (~> 2.0.0)
-  strong_migrations (~> 1.0.0)
+  strong_migrations (~> 1.1.0)
   tzinfo-data
   webmock (~> 3.14.0)
 

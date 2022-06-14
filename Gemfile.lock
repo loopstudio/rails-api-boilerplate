@@ -280,7 +280,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.18.0)
       parser (>= 3.1.1.0)
-    rubocop-rails (2.14.2)
+    rubocop-rails (2.15.0)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.7.0, < 2.0)
@@ -350,7 +350,7 @@ GEM
     xdan-datetimepicker-rails (2.5.4)
       jquery-rails
       rails (>= 3.2.16)
-    zeitwerk (2.5.4)
+    zeitwerk (2.6.0)
 
 PLATFORMS
   ruby
@@ -386,7 +386,7 @@ DEPENDENCIES
   rspec-json_expectations (~> 2.2.0)
   rspec-rails (~> 5.1.2)
   rubocop (~> 1.30.1)
-  rubocop-rails (~> 2.14.2)
+  rubocop-rails (~> 2.15.0)
   rubocop-rspec (~> 2.11.1)
   sentry-rails
   sentry-ruby

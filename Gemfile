@@ -11,7 +11,7 @@ gem 'rack-attack', '~> 6.6.1'
 gem 'rack-cors', '~> 1.1.1'
 
 # Database
-gem 'pg', '~> 1.4.1'
+gem 'pg', '~> 1.4.6'
 gem 'strong_migrations', '~> 1.2.0'
 
 # Environment variables
